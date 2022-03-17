@@ -13,13 +13,13 @@ import androidx.navigation.NavController;
 import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
 
-public class CommonAuthFragment extends Fragment {
+public class CommonLoginFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_common_auth, container, false);
+        return inflater.inflate(R.layout.fragment_common_login, container, false);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class CommonAuthFragment extends Fragment {
                 MainActivity activity = (MainActivity) getActivity();
                 NavController navController = activity.getNavController();
                 if(navController != null) {
-                    navController.navigate(R.id.action_commonAuthFragment_to_homeFragment);
+                    navController.navigate(R.id.action_commonLoginFragment_to_OTPFragment);
                 }
             }
         );

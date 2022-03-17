@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.nav_graph);
         if(isLoggedIn) {
             navGraph.setStartDestination(R.id.homeFragment);
-        } else navGraph.setStartDestination(R.id.commonAuthFragment);
+        } else navGraph.setStartDestination(R.id.commonLoginFragment);
         navController.setGraph(navGraph);
     }
 
