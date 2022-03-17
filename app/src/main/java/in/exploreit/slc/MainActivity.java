@@ -7,36 +7,56 @@ import android.view.animation.AnticipateInterpolator;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.splashscreen.SplashScreen;
-
-import in.exploreit.slc.databinding.ActivityMainBinding;
+import androidx.navigation.NavController;
+import androidx.navigation.NavGraph;
+import androidx.navigation.fragment.NavHostFragment;
 
 public class MainActivity extends AppCompatActivity {
+
+    private NavController navController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SplashScreen.installSplashScreen(this).setOnExitAnimationListener(
-                splashScreenViewProvider -> {
-                    ObjectAnimator fade = ObjectAnimator.ofFloat(
-                            splashScreenViewProvider.getIconView(),
-                            "alpha",
-                            1.0f,
-                            0.0f
-                    );
-                    fade.setInterpolator(new AnticipateInterpolator());
-                    fade.setDuration(500L);
-                    fade.addListener(new Animator.AnimatorListener() {
-                        @Override
-                        public void onAnimationEnd(Animator animation) {splashScreenViewProvider.remove();}
-                        @Override public void onAnimationStart(Animator animation) { }
-                        @Override public void onAnimationCancel(Animator animation) { }
-                        @Override public void onAnimationRepeat(Animator animation) { }
-                    });
-                    fade.start();
-                }
-        );
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        binding.meow.setText(R.string.app_name);
+        setupSplashScreen();
+        setContentView(R.layout.activity_main);
+        checkIfLoggedIn();
     }
+
+    private void checkIfLoggedIn() {
+        // TODO replace this hardcoded boolean with actual user checks
+        boolean isLoggedIn = false;
+        navController = ((NavHostFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.nav_host_fragment)).getNavController();
+        NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.nav_graph);
+        if(isLoggedIn) {
+            navGraph.setStartDestination(R.id.homeFragment);
+        } else navGraph.setStartDestination(R.id.commonAuthFragment);
+        navController.setGraph(navGraph);
+    }
+
+    private void setupSplashScreen() {
+        SplashScreen.installSplashScreen(this).setOnExitAnimationListener(
+            splashScreenViewProvider -> {
+                ObjectAnimator fade = ObjectAnimator.ofFloat(
+                        splashScreenViewProvider.getIconView(),
+                        "alpha",
+                        1.0f,
+                        0.0f
+                );
+                fade.setInterpolator(new AnticipateInterpolator());
+                fade.setDuration(500L);
+                fade.addListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {splashScreenViewProvider.remove();}
+                    @Override public void onAnimationStart(Animator animation) { }
+                    @Override public void onAnimationCancel(Animator animation) { }
+                    @Override public void onAnimationRepeat(Animator animation) { }
+                });
+                fade.start();
+            }
+        );
+    }
+
+    public NavController getNavController() { return navController; }
 }
