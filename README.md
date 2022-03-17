@@ -26,6 +26,5 @@ ExploreiT Research is a start-up working towards youth empowerment and environme
 ## Links
 
  - [Figma File](https://www.figma.com/file/6ehjDpDPL62MFL4ZZB3Fgg/Exploreit---App-Development?node-id=0%3A1)
- - [Sync with Android Studio - Part 1](https://youtu.be/swNHOI0J0pw)
- - [Sync with Android Studio - Part 2](https://www.youtube.com/watch?v=6L5TrhNoVZA)
+ - [Sync with Android Studio - Part 1](https://www.youtube.com/watch?v=VEM-IEG9SXs)
 
