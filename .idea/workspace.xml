@@ -9,8 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5697a316-6168-47e1-b5d5-c1f6ba72eaf2" name="Default Changelist" comment="extra files">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5697a316-6168-47e1-b5d5-c1f6ba72eaf2" name="Default Changelist" comment="fonts added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +177,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647547838409</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fonts added&#10;login page 1st commit -nishtaa">
+      <created>1647548722311</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647548722311</updated>
+    </task>
+    <task id="LOCAL-00005" summary="fonts added">
+      <created>1647548765821</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647548765821</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +209,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Created Events, New projects and Old Projects View Model Class&#10;- Created an adapter &amp; a layout for events" />
     <MESSAGE value="extra files" />
-    <option name="LAST_COMMIT_MESSAGE" value="extra files" />
+    <MESSAGE value="fonts added&#10;login page 1st commit -nishtaa" />
+    <MESSAGE value="fonts added" />
+    <option name="LAST_COMMIT_MESSAGE" value="fonts added" />
   </component>
 </project>
