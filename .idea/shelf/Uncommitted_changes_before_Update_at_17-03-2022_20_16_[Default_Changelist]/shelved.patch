@@ -1,0 +1,40 @@
+Index: local.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>## This file must *NOT* be checked into Version Control Systems,\r\n# as it contains information specific to your local configuration.\r\n#\r\n# Location of the SDK. This is only used by Gradle.\r\n# For customization when using a Version Control System, please read the\r\n# header note.\r\n#Thu Mar 17 16:11:23 IST 2022\r\nsdk.dir=C\\:\\\\Users\\\\Jayra\\\\AppData\\\\Local\\\\Android\\\\Sdk\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/local.properties b/local.properties
+--- a/local.properties	(revision 6fa9ff4c55667cff4912013667670020d6693f00)
++++ b/local.properties	(date 1647520184239)
+@@ -4,5 +4,5 @@
+ # Location of the SDK. This is only used by Gradle.
+ # For customization when using a Version Control System, please read the
+ # header note.
+-#Thu Mar 17 16:11:23 IST 2022
+-sdk.dir=C\:\\Users\\Jayra\\AppData\\Local\\Android\\Sdk
++#Thu Mar 17 17:59:44 IST 2022
++sdk.dir=C\:\\Users\\Vaish\\AppData\\Local\\Android\\Sdk
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'com.android.application'\r\n    id 'androidx.navigation.safeargs'\r\n}\r\n\r\nandroid {\r\n    compileSdk 31\r\n\r\n    defaultConfig {\r\n        applicationId \"in.exploreit.slc\"\r\n        minSdk 23\r\n        targetSdk 31\r\n        versionCode 1\r\n        versionName \"1.0\"\r\n\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility JavaVersion.VERSION_1_8\r\n        targetCompatibility JavaVersion.VERSION_1_8\r\n    }\r\n    buildFeatures {\r\n        viewBinding true\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation 'androidx.appcompat:appcompat:1.4.1'\r\n    implementation 'com.google.android.material:material:1.5.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'\r\n    testImplementation 'junit:junit:4.13.2'\r\n    androidTestImplementation 'androidx.test.ext:junit:1.1.3'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'\r\n\r\n    // Navigation Component\r\n    def nav_version = \"2.4.1\"\r\n    implementation \"androidx.navigation:navigation-fragment:$nav_version\"\r\n    implementation \"androidx.navigation:navigation-ui:$nav_version\"\r\n\r\n    // Glide\r\n    def glide_version = \"4.12.0\"\r\n    implementation \"com.github.bumptech.glide:glide:$glide_version\"\r\n    annotationProcessor \"com.github.bumptech.glide:compiler:$glide_version\"\r\n\r\n    // Splash Screen Compat Library\r\n    implementation 'androidx.core:core-splashscreen:1.0.0-beta01'\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/build.gradle b/app/build.gradle
+--- a/app/build.gradle	(revision 6fa9ff4c55667cff4912013667670020d6693f00)
++++ b/app/build.gradle	(date 1647526652236)
+@@ -51,4 +51,10 @@
+ 
+     // Splash Screen Compat Library
+     implementation 'androidx.core:core-splashscreen:1.0.0-beta01'
++
++    // Importing the BoM for the Firebase platform
++    implementation platform('com.google.firebase:firebase-bom:29.0.0')
++
++    // Declaring the dependency for the Cloud Firestore library
++    implementation 'com.google.firebase:firebase-firestore'
+ }
+\ No newline at end of file
