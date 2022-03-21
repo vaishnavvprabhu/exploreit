@@ -54,7 +54,7 @@
     </fragment>
     <fragment
         android:id="@+id/OTPFragment"
-        android:name="in.exploreit.slc.OTPFragment"
+        android:name="in.exploreit.slc.fragments.OTPFragment"
         android:label="fragment_otp"
         tools:layout="@layout/fragment_otp" >
         <action

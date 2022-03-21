@@ -1,13 +1,13 @@
 package in.exploreit.slc.data.models;
 
-public class new_projects {
+public class NewProjects {
     private String name;
     private String img;
     private String desc;
     private int year;
     private String link;
 
-    public new_projects(){
+    public NewProjects(){
 
 /*            public exercises(String name, String time_taken, String image){
             this.name = name;
