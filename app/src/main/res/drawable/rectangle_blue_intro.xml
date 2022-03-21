@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Bottom 2dp Shadow -->
+<item>
+    <shape  android:shape="rectangle">
 
-<shape xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/listview_background_shape">
-    <stroke android:width="2dp" android:color="#000000" />
+        <solid android:color="#40000000" />
+        <corners android:radius="5dp"
+            android:bottomRightRadius="60dp" />
+
+    </shape>
+</item>
+<item android:bottom="10px">
+<shape android:id="@+id/listview_background_shape">
+    <stroke android:width="2dp" android:color="#000000"></stroke>
     <padding android:left="2dp"
         android:top="2dp"
         android:right="2dp"
@@ -11,4 +22,5 @@
         android:bottomRightRadius="60dp"/>
     <solid android:color="#C7E6FF" />
 
-</shape>
+</shape></item>
+</layer-list>

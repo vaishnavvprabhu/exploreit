@@ -24,7 +24,7 @@ public class CommonLoginFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        view.findViewById(R.id.something).setOnClickListener(
+        view.findViewById(R.id.continue_bt).setOnClickListener(
             textView -> {
                 MainActivity activity = (MainActivity) getActivity();
                 NavController navController = activity.getNavController();

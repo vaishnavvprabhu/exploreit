@@ -4,8 +4,15 @@
     <shared>
       <config>
         <device id="_device_class_phone" />
-        <device id="pixel" />
+        <device id="pixel_4_xl" />
+        <device id="pixel_3" />
+        <device id="Nexus 10" />
+        <device id="Nexus 6P" />
+        <device id="Nexus 6" />
+        <device id="pixel_c" />
         <device id="pixel_5" />
+        <device id="pixel_2_xl" />
+        <device id="pixel" />
       </config>
     </shared>
   </component>
@@ -13,18 +20,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b322c12c-8af2-462e-be74-4df7b0a76441" name="Default Changelist" comment="Intro/Home fragment page first draft&#10;Image view icons added as png(for now)&#10;Rectangle drawable file added&#10;18/03/22 02:31 am">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="b322c12c-8af2-462e-be74-4df7b0a76441" name="Default Changelist" comment="Home screen update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\hkgau\.android\avd\Pixel_5_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\vaish\.android\avd\Pixel_5_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -68,6 +72,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
@@ -84,8 +89,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -185,7 +191,28 @@
       <option name="project" value="LOCAL" />
       <updated>1647550901027</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Intro/Home fragment page first draft&#10;Image view icons added as png(for now)&#10;Rectangle drawable file added&#10;18/03/22 02:31 am">
+      <created>1647551125989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647551125989</updated>
+    </task>
+    <task id="LOCAL-00006" summary="home screen commits update">
+      <created>1647856065199</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647856065199</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Home screen update">
+      <created>1647856123745</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647856123745</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,6 +231,8 @@
     <MESSAGE value="- Created Events, New projects and Old Projects View Model Class&#10;- Created an adapter &amp; a layout for events" />
     <MESSAGE value="branch change commit" />
     <MESSAGE value="Intro/Home fragment page first draft&#10;Image view icons added as png(for now)&#10;Rectangle drawable file added&#10;18/03/22 02:31 am" />
-    <option name="LAST_COMMIT_MESSAGE" value="Intro/Home fragment page first draft&#10;Image view icons added as png(for now)&#10;Rectangle drawable file added&#10;18/03/22 02:31 am" />
+    <MESSAGE value="home screen commits update" />
+    <MESSAGE value="Home screen update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home screen update" />
   </component>
 </project>
