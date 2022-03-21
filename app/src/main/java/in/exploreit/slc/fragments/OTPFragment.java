@@ -13,25 +13,24 @@ import androidx.navigation.NavController;
 import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
 
-public class CommonLoginFragment extends Fragment {
-
+public class OTPFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_common_login, container, false);
+        return inflater.inflate(R.layout.fragment_otp, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        view.findViewById(R.id.continue_bt).setOnClickListener(
-            textView -> {
-                MainActivity activity = (MainActivity) getActivity();
-                NavController navController = activity.getNavController();
-                if(navController != null) {
-                    navController.navigate(R.id.action_commonLoginFragment_to_OTPFragment);
+        view.findViewById(R.id.home_btn).setOnClickListener(
+                textView -> {
+                    MainActivity activity = (MainActivity) getActivity();
+                    NavController navController = activity.getNavController();
+                    if(navController != null) {
+                        navController.navigate(R.id.action_OTPFragment_to_homeFragment);
+                    }
                 }
-            }
         );
     }
 }

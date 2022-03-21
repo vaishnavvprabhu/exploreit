@@ -3,37 +3,37 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="100"
-        android:font="@font/monserrat_extralight"/>
+        android:font="@font/montserrat_extralight"/>
 
     <font
         android:fontStyle="normal"
         android:fontWeight="200"
-        android:font="@font/monserrat_light"/>
+        android:font="@font/montserrat_light"/>
 
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/monserrat_regular"/>
+        android:font="@font/montserrat_regular"/>
 
     <font
         android:fontStyle="normal"
         android:fontWeight="600"
-        android:font="@font/monserrat_semibold"
+        android:font="@font/montserrat_semibold"
         />
 
     <font
         android:fontStyle="normal"
         android:fontWeight="800"
-        android:font="@font/monserrat_bold"/>
+        android:font="@font/montserrat_bold"/>
 
     <font
         android:fontStyle="normal"
         android:fontWeight="1000"
-        android:font="@font/monserrat_extrabold"/>
+        android:font="@font/montserrat_extrabold"/>
 
     <font
         android:fontStyle="normal"
         android:fontWeight="1200"
-        android:font="@font/monserrat_black"/>
+        android:font="@font/montserrat_black"/>
 
 </font-family>
