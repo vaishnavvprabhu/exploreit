@@ -39,13 +39,15 @@
         android:id="@+id/Phoneno_input"
         android:layout_width="288dp"
         android:layout_height="55dp"
+        android:background="@color/lblue"
         android:hint="Phone_number"
         android:textColorHint="#271C1C"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/continue_bt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/content_textview"
+        app:layout_constraintVertical_bias="0.015">
 
     </com.google.android.material.textfield.TextInputLayout>
 

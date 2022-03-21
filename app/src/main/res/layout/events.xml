@@ -18,9 +18,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-
-
         <LinearLayout
             android:id="@+id/fd_imageviewlayout"
             android:layout_width="match_parent"
@@ -50,11 +47,6 @@
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fd_imageviewlayout" />
-
-
-
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
