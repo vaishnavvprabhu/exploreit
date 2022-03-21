@@ -23,14 +23,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b322c12c-8af2-462e-be74-4df7b0a76441" name="Default Changelist" comment="extra files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/contained_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/contained_button.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ev1_img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/events.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/events.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_otp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_otp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b322c12c-8af2-462e-be74-4df7b0a76441" name="Default Changelist" comment="GIT push 21-03-22 23:08&#10;OTP fragment - request otp (textview for now)&#10;contained_btn layout added&#10;events card view designed&#10;Rounded Image view style added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -240,7 +233,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647883569683</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="GIT push 21-03-22 23:08&#10;OTP fragment - request otp (textview for now)&#10;contained_btn layout added&#10;events card view designed&#10;Rounded Image view style added">
+      <created>1647884597723</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1647884597723</updated>
+    </task>
+    <task id="LOCAL-00010" summary="GIT push 21-03-22 23:08&#10;OTP fragment - request otp (textview for now)&#10;contained_btn layout added&#10;events card view designed&#10;Rounded Image view style added">
+      <created>1647884688720</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1647884688720</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +269,7 @@
     <MESSAGE value="home screen commits update" />
     <MESSAGE value="Home screen update" />
     <MESSAGE value="extra files" />
-    <option name="LAST_COMMIT_MESSAGE" value="extra files" />
+    <MESSAGE value="GIT push 21-03-22 23:08&#10;OTP fragment - request otp (textview for now)&#10;contained_btn layout added&#10;events card view designed&#10;Rounded Image view style added" />
+    <option name="LAST_COMMIT_MESSAGE" value="GIT push 21-03-22 23:08&#10;OTP fragment - request otp (textview for now)&#10;contained_btn layout added&#10;events card view designed&#10;Rounded Image view style added" />
   </component>
 </project>
