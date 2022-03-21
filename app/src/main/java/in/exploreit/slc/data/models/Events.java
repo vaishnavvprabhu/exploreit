@@ -2,7 +2,7 @@ package in.exploreit.slc.data.models;
 
 import java.util.Date;
 
-public class events {
+public class Events {
     private String name;
     private String img;
     private String desc;
@@ -12,7 +12,7 @@ public class events {
     private int time;
     private String venue;
 
-    public events(){
+    public Events(){
 //            public exercises(String name, String time_taken, String image){
 //            this.name = name;
 //            this.time_taken = time_taken;

@@ -1,12 +1,12 @@
 package in.exploreit.slc.data.models;
 
-public class old_projects {private String name;
+public class OldProjects {private String name;
     private String img;
     private String desc;
     private int year;
     private String link;
 
-    public old_projects(){
+    public OldProjects(){
 
 /*            public exercises(String name, String time_taken, String image){
             this.name = name;
