@@ -269,7 +269,7 @@
                 android:layout_height="54dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginVertical="10dp"
-                android:src="@drawable/ongoingProj_icon" />
+                android:src="@drawable/ongoing_proj_icon" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -324,7 +324,7 @@
                 android:layout_height="54dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginVertical="10dp"
-                android:src="@drawable/oldProj_icon" />
+                android:src="@drawable/old_proj_icon" />
 
             <TextView
                 android:layout_width="match_parent"
