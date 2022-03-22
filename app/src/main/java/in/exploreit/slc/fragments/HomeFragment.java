@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        view.findViewById(R.id.card).setOnClickListener(
+        view.findViewById(R.id.aboutUsParent).setOnClickListener(
                 textView -> {
                     MainActivity activity = (MainActivity) getActivity();
                     NavController navController = activity.getNavController();

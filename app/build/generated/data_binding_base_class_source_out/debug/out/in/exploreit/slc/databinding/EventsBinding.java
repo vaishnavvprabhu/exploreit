@@ -22,9 +22,6 @@ public final class EventsBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
-  public final TextView evDesc;
-
-  @NonNull
   public final ImageView evImageview;
 
   @NonNull
@@ -33,18 +30,12 @@ public final class EventsBinding implements ViewBinding {
   @NonNull
   public final LinearLayout fdImageviewlayout;
 
-  @NonNull
-  public final TextView hoursTv;
-
-  private EventsBinding(@NonNull CardView rootView, @NonNull TextView evDesc,
-      @NonNull ImageView evImageview, @NonNull TextView evName,
-      @NonNull LinearLayout fdImageviewlayout, @NonNull TextView hoursTv) {
+  private EventsBinding(@NonNull CardView rootView, @NonNull ImageView evImageview,
+      @NonNull TextView evName, @NonNull LinearLayout fdImageviewlayout) {
     this.rootView = rootView;
-    this.evDesc = evDesc;
     this.evImageview = evImageview;
     this.evName = evName;
     this.fdImageviewlayout = fdImageviewlayout;
-    this.hoursTv = hoursTv;
   }
 
   @Override
@@ -74,12 +65,6 @@ public final class EventsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.ev_desc;
-      TextView evDesc = ViewBindings.findChildViewById(rootView, id);
-      if (evDesc == null) {
-        break missingId;
-      }
-
       id = R.id.ev_imageview;
       ImageView evImageview = ViewBindings.findChildViewById(rootView, id);
       if (evImageview == null) {
@@ -98,14 +83,7 @@ public final class EventsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.hours_tv;
-      TextView hoursTv = ViewBindings.findChildViewById(rootView, id);
-      if (hoursTv == null) {
-        break missingId;
-      }
-
-      return new EventsBinding((CardView) rootView, evDesc, evImageview, evName, fdImageviewlayout,
-          hoursTv);
+      return new EventsBinding((CardView) rootView, evImageview, evName, fdImageviewlayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
