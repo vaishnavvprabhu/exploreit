@@ -2,25 +2,41 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="_device_class_phone" />
+        <device id="pixel_5" />
+        <device id="pixel_4_xl" />
+        <device id="pixel_3" />
+        <device id="Nexus 10" />
+        <device id="Nexus 6P" />
+        <device id="Nexus 6" />
+        <device id="pixel_c" />
+        <device id="pixel_2_xl" />
+        <device id="pixel" />
+      </config>
     </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5697a316-6168-47e1-b5d5-c1f6ba72eaf2" name="Default Changelist" comment="- Created Events, New projects and Old Projects View Model Class&#10;- Created an adapter &amp; a layout for events">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-03-2022_20_16__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17-03-2022_20_16__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="b322c12c-8af2-462e-be74-4df7b0a76441" name="Default Changelist" comment="extra files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/contained_button.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/contained_button.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ev1_img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/events.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/events.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_otp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_otp.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\itachi\.android\avd\Copy_of_Pixel_5_API_22.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\hkgau\.android\avd\Pixel_5_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -59,17 +75,22 @@
       <list>
         <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="valueResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="firebase" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="26VFCrepYZr1xvXtMEeLyGqFwy2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -80,11 +101,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="project.structure.last.edited" value="SDK Location" />
-    <property name="project.structure.proportion" value="0.17" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hkgau\AndroidStudioProjects\exploreit\app\src\main\res\drawable" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hkgau\AndroidStudioProjects\exploreit\app\src\main\res\drawable" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
@@ -139,7 +167,7 @@
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
+      <option name="ACTIVITY_CLASS" value="in.exploreit.slc.MainActivity" />
       <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
@@ -150,7 +178,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5697a316-6168-47e1-b5d5-c1f6ba72eaf2" name="Default Changelist" comment="" />
+      <changelist id="b322c12c-8af2-462e-be74-4df7b0a76441" name="Default Changelist" comment="Intro/Home fragment page first draft&#10;Image view icons added as png(for now)&#10;Rectangle drawable file added&#10;18/03/22 02:31 am" />
       <created>1647500724324</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -170,7 +198,49 @@
       <option name="project" value="LOCAL" />
       <updated>1647530712145</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="branch change commit">
+      <created>1647549389004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1647549389004</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Intro/Home fragment page first draft&#10;Image view icons added as png(for now)&#10;Rectangle drawable file added&#10;18/03/22 02:31 am">
+      <created>1647550901027</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647550901027</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Intro/Home fragment page first draft&#10;Image view icons added as png(for now)&#10;Rectangle drawable file added&#10;18/03/22 02:31 am">
+      <created>1647551125989</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647551125989</updated>
+    </task>
+    <task id="LOCAL-00006" summary="home screen commits update">
+      <created>1647856065199</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647856065199</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Home screen update">
+      <created>1647856123745</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647856123745</updated>
+    </task>
+    <task id="LOCAL-00008" summary="extra files">
+      <created>1647883569683</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1647883569683</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +257,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="- Created Events, New projects and Old Projects View Model Class&#10;- Created an adapter &amp; a layout for events" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Created Events, New projects and Old Projects View Model Class&#10;- Created an adapter &amp; a layout for events" />
+    <MESSAGE value="branch change commit" />
+    <MESSAGE value="Intro/Home fragment page first draft&#10;Image view icons added as png(for now)&#10;Rectangle drawable file added&#10;18/03/22 02:31 am" />
+    <MESSAGE value="home screen commits update" />
+    <MESSAGE value="Home screen update" />
+    <MESSAGE value="extra files" />
+    <option name="LAST_COMMIT_MESSAGE" value="extra files" />
   </component>
 </project>

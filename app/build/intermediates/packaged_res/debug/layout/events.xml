@@ -16,44 +16,71 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
+        android:layout_height="236dp">
 
 
         <LinearLayout
             android:id="@+id/fd_imageviewlayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="349dp"
+            android:layout_height="135dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
 
 
             <ImageView
                 android:id="@+id/ev_imageview"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
-                android:scaleType="centerCrop" />
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/roundedImageView"
+                app:srcCompat="@drawable/ev1_img" />
+
         </LinearLayout>
 
         <TextView
             android:id="@+id/ev_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="15dp"
             android:text="Event Name"
             android:textColor="@color/black"
             android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.065"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fd_imageviewlayout" />
+            app:layout_constraintTop_toBottomOf="@+id/fd_imageviewlayout"
+            app:layout_constraintVertical_bias="0.175" />
 
+        <TextView
+            android:id="@+id/hours_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="00 Hours"
+            android:textColor="#595959"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintStart_toEndOf="@+id/ev_name"
+            app:layout_constraintTop_toBottomOf="@+id/fd_imageviewlayout"
+            app:layout_constraintVertical_bias="0.156" />
 
-
-
+        <TextView
+            android:id="@+id/ev_desc"
+            android:layout_width="314dp"
+            android:layout_height="19dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Event Description"
+            android:textColor="#595959"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.432"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ev_name"
+            app:layout_constraintVertical_bias="0.38" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

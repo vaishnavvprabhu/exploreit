@@ -2548,6 +2548,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable about_icon
+drawable app_icon_black
 drawable app_logo
 drawable avd_hide_password
 drawable avd_show_password
@@ -2585,6 +2587,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ev1_img
+drawable event_icon
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
 drawable fui_ic_check_circle_black_128dp
@@ -2651,18 +2655,32 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable old_proj_icon
+drawable ongoing_proj_icon
+drawable rectangle_blue_intro
 drawable splash_logo_container
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+font montserrat
+font montserrat_black
+font montserrat_bold
+font montserrat_extrabold
+font montserrat_extralight
+font montserrat_light
+font montserrat_regular
+font montserrat_semibold
 id ALT
+id AboutUs
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id OTPFragment
+id Phoneno_input
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2671,6 +2689,8 @@ id SYM
 id TOP_END
 id TOP_START
 id aboutFragment
+id aboutUsParent
+id aboutus
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2709,6 +2729,7 @@ id action0
 id actionDown
 id actionDownUp
 id actionUp
+id action_OTPFragment_to_homeFragment
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -2716,7 +2737,7 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
-id action_commonAuthFragment_to_homeFragment
+id action_commonLoginFragment_to_OTPFragment
 id action_container
 id action_context_bar
 id action_divider
@@ -2780,6 +2801,9 @@ id cache_measures
 id callMeasure
 id cancel_action
 id cancel_button
+id card2
+id card3
+id card4
 id carryVelocity
 id center
 id center_horizontal
@@ -2802,16 +2826,19 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
-id commonAuthFragment
+id commonLoginFragment
 id compress
 id confirm_button
 id confirmation_code
 id confirmation_code_layout
 id constraint
+id contactNo
 id container
 id content
 id contentPanel
+id content_textview
 id contiguous
+id continue_bt
 id continuousVelocity
 id coordinator
 id cos
@@ -2833,6 +2860,7 @@ id decor_content_parent
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id desc
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -2872,11 +2900,14 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id ev_desc
 id ev_imageview
 id ev_name
+id events
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id exploreitIcon
 id fade
 id fd_imageviewlayout
 id fill
@@ -2910,8 +2941,10 @@ id hideable
 id home
 id homeAsUp
 id homeFragment
+id home_btn
 id honorRequest
 id horizontal_only
+id hours_tv
 id icon
 id icon_group
 id icon_only
@@ -2942,11 +2975,18 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
+id linearLayout2
+id linearLayout3
+id linearLayout4
 id listFragment
 id listMode
 id list_item
+id listview_background_shape
 id locale
+id login_textView
 id logo
+id logout
 id ltr
 id main_tos_and_pp
 id masked
@@ -3031,8 +3071,10 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id off
+id oldProj
 id on
 id onInterceptTouchReturnSwipe
+id ongoingProj
 id outline
 id outward
 id overshoot
@@ -3059,6 +3101,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rectangle
 id rectangles
 id resend_barrier
 id resend_code
@@ -3106,6 +3149,7 @@ id sign_in_email_sent_text
 id sin
 id skipCollapsed
 id skipped
+id slc
 id slide
 id sliding_pane_detail_container
 id sliding_pane_layout
@@ -3113,7 +3157,6 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
-id something
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3207,6 +3250,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id welcome
 id welcome_back_email_link_body
 id welcome_back_idp_button
 id welcome_back_idp_prompt
@@ -3331,10 +3375,11 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout events
 layout fragment_about
-layout fragment_common_auth
+layout fragment_common_login
 layout fragment_custom_web_view
 layout fragment_home
 layout fragment_list
+layout fragment_otp
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone
@@ -4791,6 +4836,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style roundedImageView
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
