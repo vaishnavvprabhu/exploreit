@@ -1,6 +1,7 @@
 package in.exploreit.slc.data.models;
 
-public class OldProjects {private String name;
+public class OldProjects implements ListItem{
+    private String name;
     private String img;
     private String desc;
     private int year;
@@ -53,4 +54,14 @@ public class OldProjects {private String name;
     public void setLink(String link) {
         this.link = link;
     }
+
+    @Override public String getTitle() { return name; }
+
+    @Override public String getDescription() { return desc; }
+
+    @Override public int getTimeStamp() { return year; }
+
+    @Override public String getImageUrl() { return img; }
+
+    @Override public int getNumberOfDescLines() { return 3; }
 }

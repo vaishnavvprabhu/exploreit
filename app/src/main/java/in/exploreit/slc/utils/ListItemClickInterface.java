@@ -1,5 +1,5 @@
 package in.exploreit.slc.utils;
 
-public interface ListItemClickCallback {
+public interface ListItemClickInterface {
     void onListItemClicked(String pageUrl);
 }
