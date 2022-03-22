@@ -13,16 +13,85 @@
 
 
         <TextView
-            android:id="@+id/AboutUs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/aboutus_desc"
+            android:layout_width="286dp"
+            android:layout_height="240dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3sp"
+            android:text="ExploreiT was founded by Mr. Shivam Singh, the National Youth Coordinator for The Climate Reality Project India and an alumnus of XLRI Jamshedpur along with students of Symbiosis Centre for Management, Pune. The team consists of energetic and motivated youngsters who take up projects related to environmental activities in collaboration with various government institutes, Municipal Corporations, National NGOs, and corporate entities."
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/contribute_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exploreit_icon" />
+
+        <TextView
+            android:id="@+id/aboutusHead"
+            android:layout_width="154dp"
+            android:layout_height="37dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="32dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:gravity="top"
             android:text="About Us"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/aboutUs_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/exploreit_icon"
+            android:layout_width="128dp"
+            android:layout_height="43dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/app_icon_black"
+            app:layout_constraintBottom_toTopOf="@+id/aboutus_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.014"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aboutUs_img"
+            app:layout_constraintVertical_bias="0.461" />
+
+        <ImageView
+            android:id="@+id/aboutUs_img"
+            android:layout_width="310dp"
+            android:layout_height="232dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/aboutus_img"
+            app:layout_constraintBottom_toTopOf="@+id/exploreit_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutusHead" />
+
+        <Button
+            android:id="@+id/contribute_btn"
+            android:layout_width="146dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/contained_button"
+            android:fontFamily="@font/montserrat_semibold"
+            android:lineSpacingExtra="3sp"
+            android:text="Contribute"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.189"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.063" />
+            app:layout_constraintTop_toBottomOf="@+id/aboutus_desc"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

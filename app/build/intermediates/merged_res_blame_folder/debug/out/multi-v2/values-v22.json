@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\itachi\\Desktop\\SICSR\\SEM4\\slc\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
+            "outputFile": "D:\\AndroidStudioProjects\\exploreit\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v22\\values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\itachi\\.gradle\\caches\\transforms-3\\6ecb8b1b56551f60795be2ed72cf0b8b\\transformed\\appcompat-1.4.1\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-3\\6ecb8b1b56551f60795be2ed72cf0b8b\\transformed\\appcompat-1.4.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",
