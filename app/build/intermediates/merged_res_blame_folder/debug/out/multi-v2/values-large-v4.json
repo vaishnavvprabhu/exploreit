@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\hkgau\\AndroidStudioProjects\\exploreit\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "outputFile": "C:\\Users\\itachi\\Desktop\\SICSR\\SEM4\\slc\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Program Files\\Android\\Android Studio\\jre\\caches\\transforms-3\\6ecb8b1b56551f60795be2ed72cf0b8b\\transformed\\appcompat-1.4.1\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\itachi\\.gradle\\caches\\transforms-3\\6ecb8b1b56551f60795be2ed72cf0b8b\\transformed\\appcompat-1.4.1\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Program Files\\Android\\Android Studio\\jre\\caches\\transforms-3\\3e263a8a77be7f1fc225c1aae9c7e681\\transformed\\material-1.5.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "source": "C:\\Users\\itachi\\.gradle\\caches\\transforms-3\\3e263a8a77be7f1fc225c1aae9c7e681\\transformed\\material-1.5.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",

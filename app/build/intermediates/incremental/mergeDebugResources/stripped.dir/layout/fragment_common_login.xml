@@ -11,7 +11,8 @@
         android:id="@+id/login_textView"
         android:layout_width="123dp"
         android:layout_height="44dp"
-        android:text="LOGIN"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="Login"
         android:textColor="#0C0C0C"
         android:textSize="35dp"
         android:textStyle="bold"
@@ -22,43 +23,67 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.318" />
 
+
     <TextView
         android:id="@+id/content_textview"
         android:layout_width="284dp"
         android:layout_height="45dp"
+        android:fontFamily="@font/montserrat_semibold"
         android:text="Enter your mobile number in order to continue using this app"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.236"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413" />
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Phoneno_input"
-        android:layout_width="288dp"
-        android:layout_height="55dp"
-        android:hint="Phone_number"
-        android:textColorHint="#271C1C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintVertical_bias="0.409" />
 
     <Button
-        android:id="@+id/continue_bt"
-        android:layout_width="159dp"
-        android:layout_height="57dp"
+        android:id="@+id/contained_btn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/contained_button"
+        android:fontFamily="@font/montserrat_regular"
         android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932" />
+        app:layout_constraintVertical_bias="0.939" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="336dp"
+        android:hint=" Mobile Number"
+        app:hintTextColor="#006493"
+        app:layout_constraintBottom_toBottomOf="@+id/contained_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="341dp"
+            android:layout_height="62dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="185dp"
+        android:layout_height="58dp"
+        android:src="@drawable/app_icon_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

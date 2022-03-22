@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color lblue
 color purple_200
 color purple_500
 color purple_700
@@ -10,6 +11,7 @@ color white
 drawable about_icon
 drawable app_icon_black
 drawable app_logo
+drawable contained_button
 drawable ev1_img
 drawable event_icon
 drawable ic_launcher_background
@@ -28,7 +30,6 @@ font montserrat_regular
 font montserrat_semibold
 id AboutUs
 id OTPFragment
-id Phoneno_input
 id aboutFragment
 id aboutUsParent
 id aboutus
@@ -42,11 +43,10 @@ id card3
 id card4
 id commonLoginFragment
 id contactNo
+id contained_btn
 id content_textview
-id continue_bt
 id customWebViewFragment
 id desc
-id ev_desc
 id ev_imageview
 id ev_name
 id events
@@ -54,7 +54,8 @@ id exploreitIcon
 id fd_imageviewlayout
 id homeFragment
 id home_btn
-id hours_tv
+id icon_imgv
+id imageView
 id linearLayout
 id linearLayout2
 id linearLayout3
@@ -67,8 +68,14 @@ id nav_graph.xml
 id nav_host_fragment
 id oldProj
 id ongoingProj
+id otp_desc_tv
+id otp_tv
+id outlinedTextField
 id rectangle
 id slc
+id something
+id textInputEditText
+id webView
 id welcome
 layout activity_main
 layout events
@@ -86,4 +93,5 @@ string app_name
 string hello_blank_fragment
 style Theme.App.SplashScreen
 style Theme.ExploreiT
+style Theme.ExploreitHome
 style roundedImageView

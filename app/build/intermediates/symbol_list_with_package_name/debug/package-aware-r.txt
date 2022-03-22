@@ -1359,6 +1359,7 @@ color fui_bgYahoo
 color fui_transparent
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lblue
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2582,6 +2583,7 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable compat_splash_screen
 drawable compat_splash_screen_no_icon_background
+drawable contained_button
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2680,7 +2682,6 @@ id FUNCTION
 id META
 id NO_DEBUG
 id OTPFragment
-id Phoneno_input
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2833,12 +2834,12 @@ id confirmation_code
 id confirmation_code_layout
 id constraint
 id contactNo
+id contained_btn
 id container
 id content
 id contentPanel
 id content_textview
 id contiguous
-id continue_bt
 id continuousVelocity
 id coordinator
 id cos
@@ -2900,7 +2901,6 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id ev_desc
 id ev_imageview
 id ev_name
 id events
@@ -2944,14 +2944,15 @@ id homeFragment
 id home_btn
 id honorRequest
 id horizontal_only
-id hours_tv
 id icon
 id icon_group
+id icon_imgv
 id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id info
@@ -3075,7 +3076,10 @@ id oldProj
 id on
 id onInterceptTouchReturnSwipe
 id ongoingProj
+id otp_desc_tv
+id otp_tv
 id outline
+id outlinedTextField
 id outward
 id overshoot
 id packed
@@ -3157,6 +3161,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id something
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3204,6 +3209,7 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textInputEditText
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -3250,6 +3256,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id webView
 id welcome
 id welcome_back_email_link_body
 id welcome_back_idp_button
@@ -4315,6 +4322,7 @@ style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
 style Theme_ExploreiT
+style Theme_ExploreitHome
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog

@@ -4,12 +4,16 @@ package in.exploreit.slc.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import in.exploreit.slc.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -20,12 +24,33 @@ public final class FragmentOtpBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ExtendedFloatingActionButton homeBtn;
+  public final Button containedBtn;
 
-  private FragmentOtpBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ExtendedFloatingActionButton homeBtn) {
+  @NonNull
+  public final ImageView iconImgv;
+
+  @NonNull
+  public final TextView otpDescTv;
+
+  @NonNull
+  public final TextView otpTv;
+
+  @NonNull
+  public final TextInputLayout outlinedTextField;
+
+  @NonNull
+  public final TextInputEditText textInputEditText;
+
+  private FragmentOtpBinding(@NonNull ConstraintLayout rootView, @NonNull Button containedBtn,
+      @NonNull ImageView iconImgv, @NonNull TextView otpDescTv, @NonNull TextView otpTv,
+      @NonNull TextInputLayout outlinedTextField, @NonNull TextInputEditText textInputEditText) {
     this.rootView = rootView;
-    this.homeBtn = homeBtn;
+    this.containedBtn = containedBtn;
+    this.iconImgv = iconImgv;
+    this.otpDescTv = otpDescTv;
+    this.otpTv = otpTv;
+    this.outlinedTextField = outlinedTextField;
+    this.textInputEditText = textInputEditText;
   }
 
   @Override
@@ -55,13 +80,44 @@ public final class FragmentOtpBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.home_btn;
-      ExtendedFloatingActionButton homeBtn = ViewBindings.findChildViewById(rootView, id);
-      if (homeBtn == null) {
+      id = R.id.contained_btn;
+      Button containedBtn = ViewBindings.findChildViewById(rootView, id);
+      if (containedBtn == null) {
         break missingId;
       }
 
-      return new FragmentOtpBinding((ConstraintLayout) rootView, homeBtn);
+      id = R.id.icon_imgv;
+      ImageView iconImgv = ViewBindings.findChildViewById(rootView, id);
+      if (iconImgv == null) {
+        break missingId;
+      }
+
+      id = R.id.otp_desc_tv;
+      TextView otpDescTv = ViewBindings.findChildViewById(rootView, id);
+      if (otpDescTv == null) {
+        break missingId;
+      }
+
+      id = R.id.otp_tv;
+      TextView otpTv = ViewBindings.findChildViewById(rootView, id);
+      if (otpTv == null) {
+        break missingId;
+      }
+
+      id = R.id.outlinedTextField;
+      TextInputLayout outlinedTextField = ViewBindings.findChildViewById(rootView, id);
+      if (outlinedTextField == null) {
+        break missingId;
+      }
+
+      id = R.id.textInputEditText;
+      TextInputEditText textInputEditText = ViewBindings.findChildViewById(rootView, id);
+      if (textInputEditText == null) {
+        break missingId;
+      }
+
+      return new FragmentOtpBinding((ConstraintLayout) rootView, containedBtn, iconImgv, otpDescTv,
+          otpTv, outlinedTextField, textInputEditText);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
