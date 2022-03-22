@@ -35,20 +35,6 @@
         app:layout_constraintVertical_bias="0.413" />
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Phoneno_input"
-        android:layout_width="288dp"
-        android:layout_height="55dp"
-        android:hint="Phone_number"
-        android:textColorHint="#271C1C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
         android:id="@+id/continue_bt"
         android:layout_width="159dp"
@@ -60,5 +46,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.932" />
+
+    <EditText
+        android:id="@+id/editTextPhone2"
+        android:layout_width="287dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="28dp"
+        android:ems="10"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

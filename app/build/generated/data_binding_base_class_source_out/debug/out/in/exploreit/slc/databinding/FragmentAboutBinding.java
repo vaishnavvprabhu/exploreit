@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,25 +20,11 @@ public final class FragmentAboutBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final ImageView aboutUsImg;
+  public final TextView AboutUs;
 
-  @NonNull
-  public final TextView aboutusDesc;
-
-  @NonNull
-  public final TextView aboutusHead;
-
-  @NonNull
-  public final ImageView exploreitIcon;
-
-  private FragmentAboutBinding(@NonNull FrameLayout rootView, @NonNull ImageView aboutUsImg,
-      @NonNull TextView aboutusDesc, @NonNull TextView aboutusHead,
-      @NonNull ImageView exploreitIcon) {
+  private FragmentAboutBinding(@NonNull FrameLayout rootView, @NonNull TextView AboutUs) {
     this.rootView = rootView;
-    this.aboutUsImg = aboutUsImg;
-    this.aboutusDesc = aboutusDesc;
-    this.aboutusHead = aboutusHead;
-    this.exploreitIcon = exploreitIcon;
+    this.AboutUs = AboutUs;
   }
 
   @Override
@@ -69,32 +54,13 @@ public final class FragmentAboutBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.aboutUs_img;
-      ImageView aboutUsImg = ViewBindings.findChildViewById(rootView, id);
-      if (aboutUsImg == null) {
+      id = R.id.AboutUs;
+      TextView AboutUs = ViewBindings.findChildViewById(rootView, id);
+      if (AboutUs == null) {
         break missingId;
       }
 
-      id = R.id.aboutus_desc;
-      TextView aboutusDesc = ViewBindings.findChildViewById(rootView, id);
-      if (aboutusDesc == null) {
-        break missingId;
-      }
-
-      id = R.id.aboutusHead;
-      TextView aboutusHead = ViewBindings.findChildViewById(rootView, id);
-      if (aboutusHead == null) {
-        break missingId;
-      }
-
-      id = R.id.exploreit_icon;
-      ImageView exploreitIcon = ViewBindings.findChildViewById(rootView, id);
-      if (exploreitIcon == null) {
-        break missingId;
-      }
-
-      return new FragmentAboutBinding((FrameLayout) rootView, aboutUsImg, aboutusDesc, aboutusHead,
-          exploreitIcon);
+      return new FragmentAboutBinding((FrameLayout) rootView, AboutUs);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

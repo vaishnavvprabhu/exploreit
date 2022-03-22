@@ -2549,7 +2549,6 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable about_icon
-drawable aboutus_img
 drawable app_icon_black
 drawable app_logo
 drawable avd_hide_password
@@ -2588,6 +2587,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable ev1_img
 drawable event_icon
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
@@ -2672,6 +2672,7 @@ font montserrat_light
 font montserrat_regular
 font montserrat_semibold
 id ALT
+id AboutUs
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -2689,10 +2690,7 @@ id TOP_END
 id TOP_START
 id aboutFragment
 id aboutUsParent
-id aboutUs_img
 id aboutus
-id aboutusHead
-id aboutus_desc
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2803,6 +2801,9 @@ id cache_measures
 id callMeasure
 id cancel_action
 id cancel_button
+id card2
+id card3
+id card4
 id carryVelocity
 id center
 id center_horizontal
@@ -2831,7 +2832,6 @@ id confirm_button
 id confirmation_code
 id confirmation_code_layout
 id constraint
-id constraintLayout
 id contactNo
 id container
 id content
@@ -2900,15 +2900,14 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id ev_desc
 id ev_imageview
 id ev_name
 id events
-id eventsParent
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id exploreitIcon
-id exploreit_icon
 id fade
 id fd_imageviewlayout
 id fill
@@ -2934,7 +2933,6 @@ id group_divider
 id grouping
 id groups
 id guideline
-id guideline2
 id header
 id header_text
 id header_title
@@ -2946,6 +2944,7 @@ id homeFragment
 id home_btn
 id honorRequest
 id horizontal_only
+id hours_tv
 id icon
 id icon_group
 id icon_only
@@ -3073,11 +3072,9 @@ id notification_main_column
 id notification_main_column_container
 id off
 id oldProj
-id oldProjParent
 id on
 id onInterceptTouchReturnSwipe
 id ongoingProj
-id ongoingProjParent
 id outline
 id outward
 id overshoot
@@ -4839,6 +4836,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style roundedImageView
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
