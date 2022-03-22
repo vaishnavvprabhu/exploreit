@@ -1359,6 +1359,7 @@ color fui_bgYahoo
 color fui_transparent
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lblue
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2549,6 +2550,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable about_icon
+drawable aboutus_img
 drawable app_icon_black
 drawable app_logo
 drawable avd_hide_password
@@ -2582,6 +2584,7 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable compat_splash_screen
 drawable compat_splash_screen_no_icon_background
+drawable contained_button
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2672,7 +2675,6 @@ font montserrat_light
 font montserrat_regular
 font montserrat_semibold
 id ALT
-id AboutUs
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -2680,7 +2682,6 @@ id FUNCTION
 id META
 id NO_DEBUG
 id OTPFragment
-id Phoneno_input
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2690,7 +2691,10 @@ id TOP_END
 id TOP_START
 id aboutFragment
 id aboutUsParent
+id aboutUs_img
 id aboutus
+id aboutusHead
+id aboutus_desc
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2801,9 +2805,6 @@ id cache_measures
 id callMeasure
 id cancel_action
 id cancel_button
-id card2
-id card3
-id card4
 id carryVelocity
 id center
 id center_horizontal
@@ -2832,7 +2833,9 @@ id confirm_button
 id confirmation_code
 id confirmation_code_layout
 id constraint
+id constraintLayout
 id contactNo
+id contained_btn
 id container
 id content
 id contentPanel
@@ -2840,6 +2843,7 @@ id content_textview
 id contiguous
 id continue_bt
 id continuousVelocity
+id contribute_btn
 id coordinator
 id cos
 id counterclockwise
@@ -2887,6 +2891,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id editTextPhone2
 id edit_phone_number
 id edit_query
 id elastic
@@ -2900,14 +2905,15 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
-id ev_desc
 id ev_imageview
 id ev_name
 id events
+id eventsParent
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id exploreitIcon
+id exploreit_icon
 id fade
 id fd_imageviewlayout
 id fill
@@ -2933,6 +2939,7 @@ id group_divider
 id grouping
 id groups
 id guideline
+id guideline2
 id header
 id header_text
 id header_title
@@ -2944,9 +2951,9 @@ id homeFragment
 id home_btn
 id honorRequest
 id horizontal_only
-id hours_tv
 id icon
 id icon_group
+id icon_imgv
 id icon_only
 id ifRoom
 id ignore
@@ -3072,10 +3079,15 @@ id notification_main_column
 id notification_main_column_container
 id off
 id oldProj
+id oldProjParent
 id on
 id onInterceptTouchReturnSwipe
 id ongoingProj
+id ongoingProjParent
+id otp_desc_tv
+id otp_tv
 id outline
+id outlinedTextField
 id outward
 id overshoot
 id packed
@@ -3204,6 +3216,7 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textInputEditText
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -4315,6 +4328,7 @@ style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
 style Theme_ExploreiT
+style Theme_ExploreitHome
 style Theme_Material3_Dark
 style Theme_Material3_Dark_BottomSheetDialog
 style Theme_Material3_Dark_Dialog

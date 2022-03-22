@@ -5,13 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.textfield.TextInputLayout;
 import in.exploreit.slc.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -22,24 +22,24 @@ public final class FragmentCommonLoginBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextInputLayout PhonenoInput;
-
-  @NonNull
   public final TextView contentTextview;
 
   @NonNull
   public final Button continueBt;
 
   @NonNull
+  public final EditText editTextPhone2;
+
+  @NonNull
   public final TextView loginTextView;
 
   private FragmentCommonLoginBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextInputLayout PhonenoInput, @NonNull TextView contentTextview,
-      @NonNull Button continueBt, @NonNull TextView loginTextView) {
+      @NonNull TextView contentTextview, @NonNull Button continueBt,
+      @NonNull EditText editTextPhone2, @NonNull TextView loginTextView) {
     this.rootView = rootView;
-    this.PhonenoInput = PhonenoInput;
     this.contentTextview = contentTextview;
     this.continueBt = continueBt;
+    this.editTextPhone2 = editTextPhone2;
     this.loginTextView = loginTextView;
   }
 
@@ -70,12 +70,6 @@ public final class FragmentCommonLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.Phoneno_input;
-      TextInputLayout PhonenoInput = ViewBindings.findChildViewById(rootView, id);
-      if (PhonenoInput == null) {
-        break missingId;
-      }
-
       id = R.id.content_textview;
       TextView contentTextview = ViewBindings.findChildViewById(rootView, id);
       if (contentTextview == null) {
@@ -88,14 +82,20 @@ public final class FragmentCommonLoginBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.editTextPhone2;
+      EditText editTextPhone2 = ViewBindings.findChildViewById(rootView, id);
+      if (editTextPhone2 == null) {
+        break missingId;
+      }
+
       id = R.id.login_textView;
       TextView loginTextView = ViewBindings.findChildViewById(rootView, id);
       if (loginTextView == null) {
         break missingId;
       }
 
-      return new FragmentCommonLoginBinding((ConstraintLayout) rootView, PhonenoInput,
-          contentTextview, continueBt, loginTextView);
+      return new FragmentCommonLoginBinding((ConstraintLayout) rootView, contentTextview,
+          continueBt, editTextPhone2, loginTextView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
