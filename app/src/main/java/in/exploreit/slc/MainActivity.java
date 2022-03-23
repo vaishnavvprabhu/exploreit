@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity {
         navController = ((NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment)).getNavController();
         NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.nav_graph);
-        if(isLoggedIn) {
-            navGraph.setStartDestination(R.id.homeFragment);
-        } else navGraph.setStartDestination(R.id.commonLoginFragment);
+//        if(isLoggedIn) {
+//            navGraph.setStartDestination(R.id.homeFragment);
+//        } else navGraph.setStartDestination(R.id.commonLoginFragment);
         navController.setGraph(navGraph);
     }
 

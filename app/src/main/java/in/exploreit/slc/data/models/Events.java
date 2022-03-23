@@ -2,7 +2,7 @@ package in.exploreit.slc.data.models;
 
 import java.util.Date;
 
-public class Events {
+public class Events implements ListItem{
     private String name;
     private String img;
     private String desc;
@@ -17,6 +17,13 @@ public class Events {
 //            this.name = name;
 //            this.time_taken = time_taken;
 //            this.image= image;
+    }
+
+    public Events(String title, String desc, String img, int time) {
+        this.name = title;
+        this.desc = desc;
+        this.img = img;
+        this.time = time;
     }
 
     public String getName() {
@@ -82,4 +89,14 @@ public class Events {
     public void setVenue(String venue) {
         this.venue = venue;
     }
+
+    @Override public String getTitle() { return name; }
+
+    @Override public String getDescription() { return desc; }
+
+    @Override public int getTimeStamp() { return time; }
+
+    @Override public String getImageUrl() { return img; }
+
+    @Override public int getNumberOfDescLines() { return 2; }
 }

@@ -1,4 +1,4 @@
-package in.exploreit.slc.fragments;
+package in.exploreit.slc.fragments.Lists;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,13 +10,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
-import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
-import in.exploreit.slc.utils.ListItemClickCallback;
+import in.exploreit.slc.utils.CommonListAdapter;
+import in.exploreit.slc.utils.ListItemClickInterface;
 
-public class ListFragment extends Fragment implements ListItemClickCallback {
+public class ListFragment extends Fragment implements ListItemClickInterface {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -26,15 +27,11 @@ public class ListFragment extends Fragment implements ListItemClickCallback {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        view.findViewById(R.id.something).setOnClickListener(
-            textView -> {
-                MainActivity activity = (MainActivity) getActivity();
-                NavController navController = activity.getNavController();
-                if(navController != null) {
-                    navController.navigate(R.id.action_listFragment_to_customWebViewFragment);
-                }
-            }
-        );
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        CommonListAdapter commonListAdapter = new CommonListAdapter(this);
+        recyclerView.setAdapter(commonListAdapter);
+        ListsViewModel viewModel = new ViewModelProvider(requireActivity()).get(ListsViewModel.class);
+        commonListAdapter.submitList(viewModel.getListItems());
     }
 
     @Override
