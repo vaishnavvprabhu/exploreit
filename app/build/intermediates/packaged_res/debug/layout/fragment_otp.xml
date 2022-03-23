@@ -38,18 +38,15 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlinedTextField"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="354dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="64dp"
+        android:layout_width="351dp"
+        android:layout_height="82dp"
+        android:layout_marginBottom="320dp"
         android:hint="OTP"
-        android:textColorHint="@color/material_dynamic_primary30"
-        app:helperText="Request another OTP"
+        android:textColorHint="#006493"
         app:layout_constraintBottom_toTopOf="@+id/contained_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditText"
@@ -85,12 +82,29 @@
         android:id="@+id/icon_imgv"
         android:layout_width="196dp"
         android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
         android:src="@drawable/app_icon_black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintHorizontal_bias="0.074"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_light"
+        android:text="Request Another OTP"
+        android:textColor="#006493"
+        app:layout_constraintBottom_toTopOf="@+id/contained_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
+        app:layout_constraintVertical_bias="0.051" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

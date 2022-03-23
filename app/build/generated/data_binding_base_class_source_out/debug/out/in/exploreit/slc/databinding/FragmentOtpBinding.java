@@ -41,9 +41,13 @@ public final class FragmentOtpBinding implements ViewBinding {
   @NonNull
   public final TextInputEditText textInputEditText;
 
+  @NonNull
+  public final TextView textView;
+
   private FragmentOtpBinding(@NonNull ConstraintLayout rootView, @NonNull Button containedBtn,
       @NonNull ImageView iconImgv, @NonNull TextView otpDescTv, @NonNull TextView otpTv,
-      @NonNull TextInputLayout outlinedTextField, @NonNull TextInputEditText textInputEditText) {
+      @NonNull TextInputLayout outlinedTextField, @NonNull TextInputEditText textInputEditText,
+      @NonNull TextView textView) {
     this.rootView = rootView;
     this.containedBtn = containedBtn;
     this.iconImgv = iconImgv;
@@ -51,6 +55,7 @@ public final class FragmentOtpBinding implements ViewBinding {
     this.otpTv = otpTv;
     this.outlinedTextField = outlinedTextField;
     this.textInputEditText = textInputEditText;
+    this.textView = textView;
   }
 
   @Override
@@ -116,8 +121,14 @@ public final class FragmentOtpBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
       return new FragmentOtpBinding((ConstraintLayout) rootView, containedBtn, iconImgv, otpDescTv,
-          otpTv, outlinedTextField, textInputEditText);
+          otpTv, outlinedTextField, textInputEditText, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

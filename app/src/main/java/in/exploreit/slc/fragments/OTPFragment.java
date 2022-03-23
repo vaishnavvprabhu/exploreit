@@ -26,7 +26,7 @@ public class OTPFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        view.findViewById(R.id.home_btn).setOnClickListener(
+        view.findViewById(R.id.contained_btn).setOnClickListener(
                 textView -> {
                     MainActivity activity = (MainActivity) getActivity();
                     NavController navController = activity.getNavController();

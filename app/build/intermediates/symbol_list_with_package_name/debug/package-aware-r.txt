@@ -2550,6 +2550,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable about_icon
+drawable aboutus_img
 drawable app_icon_black
 drawable app_logo
 drawable avd_hide_password
@@ -2674,7 +2675,6 @@ font montserrat_light
 font montserrat_regular
 font montserrat_semibold
 id ALT
-id AboutUs
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -2691,7 +2691,10 @@ id TOP_END
 id TOP_START
 id aboutFragment
 id aboutUsParent
+id aboutUs_img
 id aboutus
+id aboutusHead
+id aboutus_desc
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2770,6 +2773,7 @@ id anticipate
 id arc
 id asConfigured
 id async
+id attendevent_btn
 id auto
 id autoComplete
 id autoCompleteToEnd
@@ -2802,9 +2806,6 @@ id cache_measures
 id callMeasure
 id cancel_action
 id cancel_button
-id card2
-id card3
-id card4
 id carryVelocity
 id center
 id center_horizontal
@@ -2833,14 +2834,21 @@ id confirm_button
 id confirmation_code
 id confirmation_code_layout
 id constraint
+id constraintLayout
 id contactNo
 id contained_btn
 id container
 id content
 id contentPanel
+id content_date
+id content_page
+id content_price
 id content_textview
+id content_time
+id content_venue
 id contiguous
 id continuousVelocity
+id contribute_btn
 id coordinator
 id cos
 id counterclockwise
@@ -2901,13 +2909,17 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id ev_desc
+id ev_hours
 id ev_imageview
 id ev_name
 id events
+id eventsParent
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id exploreitIcon
+id exploreit_icon
 id fade
 id fd_imageviewlayout
 id fill
@@ -2953,6 +2965,8 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView10
+id imageView2
 id immediateStop
 id included
 id info
@@ -2986,6 +3000,7 @@ id list_item
 id listview_background_shape
 id locale
 id login_textView
+id login_textView2
 id logo
 id logout
 id ltr
@@ -3073,9 +3088,11 @@ id notification_main_column
 id notification_main_column_container
 id off
 id oldProj
+id oldProjParent
 id on
 id onInterceptTouchReturnSwipe
 id ongoingProj
+id ongoingProjParent
 id otp_desc_tv
 id otp_tv
 id outline
@@ -3103,6 +3120,9 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id proj_desc
+id proj_name
+id proj_year
 id radio
 id ratio
 id rectangle
@@ -3214,6 +3234,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3384,6 +3405,7 @@ layout events
 layout fragment_about
 layout fragment_common_login
 layout fragment_custom_web_view
+layout fragment_dialog
 layout fragment_home
 layout fragment_list
 layout fragment_otp
@@ -3475,6 +3497,7 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout ongoing_proj
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material

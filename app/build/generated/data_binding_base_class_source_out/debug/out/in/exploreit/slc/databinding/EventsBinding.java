@@ -22,6 +22,12 @@ public final class EventsBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
+  public final TextView evDesc;
+
+  @NonNull
+  public final TextView evHours;
+
+  @NonNull
   public final ImageView evImageview;
 
   @NonNull
@@ -30,9 +36,12 @@ public final class EventsBinding implements ViewBinding {
   @NonNull
   public final LinearLayout fdImageviewlayout;
 
-  private EventsBinding(@NonNull CardView rootView, @NonNull ImageView evImageview,
-      @NonNull TextView evName, @NonNull LinearLayout fdImageviewlayout) {
+  private EventsBinding(@NonNull CardView rootView, @NonNull TextView evDesc,
+      @NonNull TextView evHours, @NonNull ImageView evImageview, @NonNull TextView evName,
+      @NonNull LinearLayout fdImageviewlayout) {
     this.rootView = rootView;
+    this.evDesc = evDesc;
+    this.evHours = evHours;
     this.evImageview = evImageview;
     this.evName = evName;
     this.fdImageviewlayout = fdImageviewlayout;
@@ -65,6 +74,18 @@ public final class EventsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.ev_desc;
+      TextView evDesc = ViewBindings.findChildViewById(rootView, id);
+      if (evDesc == null) {
+        break missingId;
+      }
+
+      id = R.id.ev_hours;
+      TextView evHours = ViewBindings.findChildViewById(rootView, id);
+      if (evHours == null) {
+        break missingId;
+      }
+
       id = R.id.ev_imageview;
       ImageView evImageview = ViewBindings.findChildViewById(rootView, id);
       if (evImageview == null) {
@@ -83,7 +104,8 @@ public final class EventsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new EventsBinding((CardView) rootView, evImageview, evName, fdImageviewlayout);
+      return new EventsBinding((CardView) rootView, evDesc, evHours, evImageview, evName,
+          fdImageviewlayout);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
