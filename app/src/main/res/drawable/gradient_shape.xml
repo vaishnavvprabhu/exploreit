@@ -8,5 +8,6 @@ android:shape="rectangle" >
     android:startColor="#00ffffff"
     android:centerColor="#00ffffff" />
 
+
 <corners android:radius="0dp" />
 </shape>
