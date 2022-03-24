@@ -1,25 +1,25 @@
 package in.exploreit.slc;
 
-//public class EventsAdapter extends FirebaseRecyclerAdapter<Events, EventsAdapter.eventsViewholder> {
+//public class EventsAdapter extends FirebaseRecyclerAdapter<Event, EventsAdapter.eventsViewholder> {
 //
 //    //Author : VVP
 //    ListItemClickInterface clickCallback;
 //    public EventsAdapter(
-//            @NonNull FirebaseRecyclerOptions<Events> options, ListItemClickInterface clickCallback) {
+//            @NonNull FirebaseRecyclerOptions<Event> options, ListItemClickInterface clickCallback) {
 //        super(options);
 //        this.clickCallback = clickCallback;
 //    }
 //
 //    //Function to bind the view in Card View (events.xml) with data in the model class - events.class
 //    @Override
-//    protected void onBindViewHolder(@NonNull EventsAdapter.eventsViewholder holder, int position, @NonNull Events model)
+//    protected void onBindViewHolder(@NonNull EventsAdapter.eventsViewholder holder, int position, @NonNull Event model)
 //    {
 //        //Data Entry
 //        holder.evname.setText(model.getName());
 //        String eximgview = String.valueOf(model.getImg());
 //        Glide.with(holder.image).load(eximgview).centerCrop().into(holder.image);
 //        holder.rootCardView.setOnClickListener(v -> {
-//            // TODO change this hardcoded url with page url which needs to be added in Events class
+//            // TODO change this hardcoded url with page url which needs to be added in Event class
 //            clickCallback.onListItemClicked("https://exploreit.in/");
 //        });
 //    }
