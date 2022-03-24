@@ -7,27 +7,32 @@ android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/content_page"
-        android:layout_width="353dp"
-        android:layout_height="279dp"
+        android:layout_width="319dp"
+        android:layout_height="253dp"
         android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="9dp"
         android:fontFamily="@font/montserrat_semibold"
         android:text="Per Capita Carbon emissions in India are 2.7 tonnes/annum. \n\n To put that into perspective, each person must plant 340 trees to offset this carbon emission. \n\n Project 8 aims to create a carbon neutral India by planting the ideal tree for the right location- based on extensive geographical research and impact."
         android:textColor="#232121"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/event_name" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="316dp"
         android:layout_height="210dp"
-        android:layout_margin="9dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/attendevent_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content_page"
         app:layout_constraintVertical_bias="0.0">
@@ -104,7 +109,7 @@ android:layout_height="match_parent">
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/content_page"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_event"
         app:layout_constraintVertical_bias="0.281" />
