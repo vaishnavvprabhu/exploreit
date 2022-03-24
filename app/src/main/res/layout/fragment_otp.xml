@@ -43,7 +43,7 @@
         android:layout_marginTop="64dp"
         android:hint="OTP"
         android:textColorHint="#006493"
-        app:layout_constraintBottom_toTopOf="@+id/contained_btn"
+        app:layout_constraintBottom_toTopOf="@+id/home_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
+            android:id="@+id/otp_field"
             android:layout_width="match_parent"
             android:layout_height="68dp"
             app:layout_constraintBottom_toTopOf="@+id/home_btn"
@@ -64,7 +64,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/contained_btn"
+        android:id="@+id/home_btn"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:background="@drawable/contained_button"
@@ -79,6 +79,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.939" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/contained_button"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="login"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808" />
 
     <ImageView
         android:id="@+id/icon_imgv"
@@ -99,12 +116,22 @@
         android:fontFamily="@font/montserrat_light"
         android:text="Request Another OTP"
         android:textColor="#006493"
-        app:layout_constraintBottom_toTopOf="@+id/contained_btn"
+        app:layout_constraintBottom_toTopOf="@+id/home_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
         app:layout_constraintVertical_bias="0.053" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
