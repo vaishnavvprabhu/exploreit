@@ -58,7 +58,7 @@ public class CommonListAdapter extends ListAdapter<ListItem, CommonListAdapter.L
             String imageUrl = String.valueOf(ListItem.getImageUrl());
             Glide.with(image).load(imageUrl).centerCrop().into(image);
             rootCardView.setOnClickListener(v -> {
-                // TODO change this hardcoded url with page url which needs to be added in Events class
+                // TODO change this hardcoded url with page url which needs to be added in Event class
                 listItemClickCallback.onListItemClicked("https://exploreit.in/");
             });
         }

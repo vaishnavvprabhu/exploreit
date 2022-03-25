@@ -1,13 +1,13 @@
 package in.exploreit.slc.data.models;
 
-public class OldProjects implements ListItem{
+public class NewProject implements ListItem{
     private String name;
     private String img;
     private String desc;
     private int year;
     private String link;
 
-    public OldProjects(){
+    public NewProject(){
 
 /*            public exercises(String name, String time_taken, String image){
             this.name = name;
