@@ -10,7 +10,7 @@
         <entry key="..\:/AndroidStudioProjects/exploreit/app/src/main/res/layout/events.xml" value="0.20521590423257802" />
         <entry key="..\:/AndroidStudioProjects/exploreit/app/src/main/res/layout/fragment_about.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/exploreit/app/src/main/res/layout/fragment_common_login.xml" value="0.20521590423257802" />
-        <entry key="..\:/AndroidStudioProjects/exploreit/app/src/main/res/layout/fragment_home.xml" value="0.176" />
+        <entry key="..\:/AndroidStudioProjects/exploreit/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/exploreit/app/src/main/res/layout/fragment_list.xml" value="0.20521590423257802" />
         <entry key="..\:/AndroidStudioProjects/exploreit/app/src/main/res/layout/fragment_otp.xml" value="0.20521590423257802" />
         <entry key="..\:/AndroidStudioProjects/exploreit/app/src/main/res/layout/list_item.xml" value="0.20521590423257802" />
@@ -26,7 +26,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2" />
+        <option name="scale" value="0.176" />
       </ProjectState>
     </option>
   </component>

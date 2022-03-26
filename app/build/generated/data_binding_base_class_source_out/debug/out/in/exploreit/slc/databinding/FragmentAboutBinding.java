@@ -5,8 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +19,7 @@ import java.lang.String;
 
 public final class FragmentAboutBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final ImageView aboutUsImg;
@@ -36,7 +36,7 @@ public final class FragmentAboutBinding implements ViewBinding {
   @NonNull
   public final ImageView exploreitIcon;
 
-  private FragmentAboutBinding(@NonNull FrameLayout rootView, @NonNull ImageView aboutUsImg,
+  private FragmentAboutBinding(@NonNull ScrollView rootView, @NonNull ImageView aboutUsImg,
       @NonNull TextView aboutusDesc, @NonNull TextView aboutusHead, @NonNull Button contributeBtn,
       @NonNull ImageView exploreitIcon) {
     this.rootView = rootView;
@@ -49,7 +49,7 @@ public final class FragmentAboutBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -104,7 +104,7 @@ public final class FragmentAboutBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentAboutBinding((FrameLayout) rootView, aboutUsImg, aboutusDesc, aboutusHead,
+      return new FragmentAboutBinding((ScrollView) rootView, aboutUsImg, aboutusDesc, aboutusHead,
           contributeBtn, exploreitIcon);
     }
     String missingId = rootView.getResources().getResourceName(id);

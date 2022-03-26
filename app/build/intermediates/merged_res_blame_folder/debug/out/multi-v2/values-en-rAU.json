@@ -4,23 +4,6 @@
             "outputFile": "D:\\AndroidStudioProjects\\exploreit\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rAU\\values-en-rAU.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-3\\17dca810d6e97cee4dd7b2b1a3126c83\\transformed\\browser-1.3.0\\res\\values-en-rAU\\values-en-rAU.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,153,250,359",
-                        "endColumns": "97,96,108,98",
-                        "endOffsets": "148,245,354,453"
-                    },
-                    "to": {
-                        "startLines": "30,31,32,33",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "3055,3153,3250,3359",
-                        "endColumns": "97,96,108,98",
-                        "endOffsets": "3148,3245,3354,3453"
-                    }
-                },
-                {
                     "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-3\\f9820eab98e639781b61c809f8895e0e\\transformed\\navigation-ui-2.4.1\\res\\values-en-rAU\\values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3",
@@ -69,6 +52,23 @@
                         "startOffsets": "398,502,602,710,794,894,1009,1087,1162,1253,1346,1441,1535,1635,1728,1823,1917,2008,2099,2181,2284,2387,2486,2591,2695,2799,2955,11895",
                         "endColumns": "103,99,107,83,99,114,77,74,90,92,94,93,99,92,94,93,90,90,81,102,102,98,104,103,103,155,99,82",
                         "endOffsets": "497,597,705,789,889,1004,1082,1157,1248,1341,1436,1530,1630,1723,1818,1912,2003,2094,2176,2279,2382,2481,2586,2690,2794,2950,3050,11973"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-3\\67007e5edc30bb0a5fa2e37376a6ae76\\transformed\\browser-1.4.0\\res\\values-en-rAU\\values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,153,250,359",
+                        "endColumns": "97,96,108,98",
+                        "endOffsets": "148,245,354,453"
+                    },
+                    "to": {
+                        "startLines": "30,31,32,33",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "3055,3153,3250,3359",
+                        "endColumns": "97,96,108,98",
+                        "endOffsets": "3148,3245,3354,3453"
                     }
                 },
                 {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools">
     <color name="black">#FF000000</color>
+    <color name="btn_blue">#006493</color>
     <color name="lblue">#c6e7fe</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -18,7 +19,7 @@
     </style>
     <style name="Theme.ExploreiT" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/btn_blue</item>
         <item name="colorPrimaryVariant">@color/lblue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -31,7 +32,7 @@
     </style>
     <style name="Theme.ExploreitHome" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/btn_blue</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->

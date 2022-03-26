@@ -1,6 +1,7 @@
 R_DEF: Internal format may change without notice
 local
 color black
+color btn_blue
 color lblue
 color purple_200
 color purple_500
@@ -9,6 +10,7 @@ color teal_200
 color teal_700
 color white
 drawable about_icon
+drawable aboutus_img
 drawable app_icon_black
 drawable app_logo
 drawable contained_button
@@ -28,29 +30,32 @@ font montserrat_extralight
 font montserrat_light
 font montserrat_regular
 font montserrat_semibold
-id AboutUs
 id OTPFragment
 id aboutFragment
 id aboutUsParent
+id aboutUs_img
 id aboutus
+id aboutusHead
+id aboutus_desc
 id action_OTPFragment_to_homeFragment
 id action_commonLoginFragment_to_OTPFragment
 id action_homeFragment_to_aboutFragment
 id action_homeFragment_to_listFragment
 id action_listFragment_to_customWebViewFragment
-id card2
-id card3
-id card4
 id commonLoginFragment
+id constraintLayout
 id contactNo
 id contained_btn
 id content_textview
+id contribute_btn
 id customWebViewFragment
 id desc
 id ev_imageview
 id ev_name
 id events
+id eventsParent
 id exploreitIcon
+id exploreit_icon
 id fd_imageviewlayout
 id homeFragment
 id home_btn
@@ -67,7 +72,9 @@ id logout
 id nav_graph.xml
 id nav_host_fragment
 id oldProj
+id oldProjParent
 id ongoingProj
+id ongoingProjParent
 id otp_desc_tv
 id otp_tv
 id outlinedTextField

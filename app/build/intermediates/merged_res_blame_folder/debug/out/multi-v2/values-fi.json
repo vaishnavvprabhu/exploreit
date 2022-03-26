@@ -4,6 +4,23 @@
             "outputFile": "D:\\AndroidStudioProjects\\exploreit\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fi\\values-fi.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-3\\67007e5edc30bb0a5fa2e37376a6ae76\\transformed\\browser-1.4.0\\res\\values-fi\\values-fi.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,158,259,368",
+                        "endColumns": "102,100,108,98",
+                        "endOffsets": "153,254,363,462"
+                    },
+                    "to": {
+                        "startLines": "56,59,60,61",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "6298,6559,6660,6769",
+                        "endColumns": "102,100,108,98",
+                        "endOffsets": "6396,6655,6764,6863"
+                    }
+                },
+                {
                     "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-3\\f9820eab98e639781b61c809f8895e0e\\transformed\\navigation-ui-2.4.1\\res\\values-fi\\values-fi.xml",
                     "from": {
                         "startLines": "2,3",
@@ -88,23 +105,6 @@
                         "endLines": "6,34,35,36,37,57,58,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,200",
                         "endColumns": "12,82,95,107,83,64,92,74,64,87,65,57,70,65,53,109,59,63,53,72,115,83,80,102,84,84,89,66,65,76,81,83,73,78,76,71,88,75,90,94,73,72,93,53,71,85,85,61,63,62,100,101,94,102,78",
                         "endOffsets": "592,3345,3441,3549,3633,6461,6554,15578,15643,15731,15797,15855,15926,15992,16046,16156,16216,16280,16334,16407,16523,16607,16688,16791,16876,16961,17051,17118,17184,17261,17343,17427,17501,17580,17657,17729,17818,17894,17985,18080,18154,18227,18321,18375,18447,18533,18619,18681,18745,18808,18909,19011,19106,19209,19517"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\vaish\\.gradle\\caches\\transforms-3\\17dca810d6e97cee4dd7b2b1a3126c83\\transformed\\browser-1.3.0\\res\\values-fi\\values-fi.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,158,259,368",
-                        "endColumns": "102,100,108,98",
-                        "endOffsets": "153,254,363,462"
-                    },
-                    "to": {
-                        "startLines": "56,59,60,61",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "6298,6559,6660,6769",
-                        "endColumns": "102,100,108,98",
-                        "endOffsets": "6396,6655,6764,6863"
                     }
                 },
                 {

@@ -1282,6 +1282,7 @@ color browser_actions_bg_grey
 color browser_actions_divider_color
 color browser_actions_text_color
 color browser_actions_title_color
+color btn_blue
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -2550,6 +2551,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable about_icon
+drawable aboutus_img
 drawable app_icon_black
 drawable app_logo
 drawable avd_hide_password
@@ -2674,7 +2676,6 @@ font montserrat_light
 font montserrat_regular
 font montserrat_semibold
 id ALT
-id AboutUs
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -2691,7 +2692,10 @@ id TOP_END
 id TOP_START
 id aboutFragment
 id aboutUsParent
+id aboutUs_img
 id aboutus
+id aboutusHead
+id aboutus_desc
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2802,9 +2806,6 @@ id cache_measures
 id callMeasure
 id cancel_action
 id cancel_button
-id card2
-id card3
-id card4
 id carryVelocity
 id center
 id center_horizontal
@@ -2833,6 +2834,7 @@ id confirm_button
 id confirmation_code
 id confirmation_code_layout
 id constraint
+id constraintLayout
 id contactNo
 id contained_btn
 id container
@@ -2841,6 +2843,7 @@ id contentPanel
 id content_textview
 id contiguous
 id continuousVelocity
+id contribute_btn
 id coordinator
 id cos
 id counterclockwise
@@ -2904,10 +2907,12 @@ id enterAlwaysCollapsed
 id ev_imageview
 id ev_name
 id events
+id eventsParent
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id exploreitIcon
+id exploreit_icon
 id fade
 id fd_imageviewlayout
 id fill
@@ -3073,9 +3078,11 @@ id notification_main_column
 id notification_main_column_container
 id off
 id oldProj
+id oldProjParent
 id on
 id onInterceptTouchReturnSwipe
 id ongoingProj
+id ongoingProjParent
 id otp_desc_tv
 id otp_tv
 id outline

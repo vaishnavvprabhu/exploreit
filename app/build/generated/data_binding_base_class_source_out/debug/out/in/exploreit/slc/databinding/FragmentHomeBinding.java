@@ -7,11 +7,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.card.MaterialCardView;
@@ -22,7 +22,7 @@ import java.lang.String;
 
 public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final MaterialCardView aboutUsParent;
@@ -47,9 +47,6 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @NonNull
   public final ImageView exploreitIcon;
-
-  @NonNull
-  public final Guideline guideline2;
 
   @NonNull
   public final LinearLayout linearLayout;
@@ -87,11 +84,10 @@ public final class FragmentHomeBinding implements ViewBinding {
   @NonNull
   public final TextView welcome;
 
-  private FragmentHomeBinding(@NonNull ConstraintLayout rootView,
-      @NonNull MaterialCardView aboutUsParent, @NonNull ImageView aboutus,
-      @NonNull ConstraintLayout constraintLayout, @NonNull TextView contactNo,
-      @NonNull TextView desc, @NonNull ImageView events, @NonNull MaterialCardView eventsParent,
-      @NonNull ImageView exploreitIcon, @NonNull Guideline guideline2,
+  private FragmentHomeBinding(@NonNull ScrollView rootView, @NonNull MaterialCardView aboutUsParent,
+      @NonNull ImageView aboutus, @NonNull ConstraintLayout constraintLayout,
+      @NonNull TextView contactNo, @NonNull TextView desc, @NonNull ImageView events,
+      @NonNull MaterialCardView eventsParent, @NonNull ImageView exploreitIcon,
       @NonNull LinearLayout linearLayout, @NonNull LinearLayout linearLayout2,
       @NonNull LinearLayout linearLayout3, @NonNull LinearLayout linearLayout4,
       @NonNull Button logout, @NonNull ImageView oldProj, @NonNull MaterialCardView oldProjParent,
@@ -106,7 +102,6 @@ public final class FragmentHomeBinding implements ViewBinding {
     this.events = events;
     this.eventsParent = eventsParent;
     this.exploreitIcon = exploreitIcon;
-    this.guideline2 = guideline2;
     this.linearLayout = linearLayout;
     this.linearLayout2 = linearLayout2;
     this.linearLayout3 = linearLayout3;
@@ -123,7 +118,7 @@ public final class FragmentHomeBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -193,12 +188,6 @@ public final class FragmentHomeBinding implements ViewBinding {
       id = R.id.exploreitIcon;
       ImageView exploreitIcon = ViewBindings.findChildViewById(rootView, id);
       if (exploreitIcon == null) {
-        break missingId;
-      }
-
-      id = R.id.guideline2;
-      Guideline guideline2 = ViewBindings.findChildViewById(rootView, id);
-      if (guideline2 == null) {
         break missingId;
       }
 
@@ -274,10 +263,10 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ConstraintLayout) rootView, aboutUsParent, aboutus,
-          constraintLayout, contactNo, desc, events, eventsParent, exploreitIcon, guideline2,
-          linearLayout, linearLayout2, linearLayout3, linearLayout4, logout, oldProj, oldProjParent,
-          ongoingProj, ongoingProjParent, rectangle, slc, welcome);
+      return new FragmentHomeBinding((ScrollView) rootView, aboutUsParent, aboutus,
+          constraintLayout, contactNo, desc, events, eventsParent, exploreitIcon, linearLayout,
+          linearLayout2, linearLayout3, linearLayout4, logout, oldProj, oldProjParent, ongoingProj,
+          ongoingProjParent, rectangle, slc, welcome);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
