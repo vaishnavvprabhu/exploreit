@@ -54,12 +54,7 @@
             android:id="@+id/otp_field"
             android:layout_width="match_parent"
             android:layout_height="68dp"
-            app:layout_constraintBottom_toTopOf="@+id/home_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv"
-            app:layout_constraintVertical_bias="0.058" />
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
