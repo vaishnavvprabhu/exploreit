@@ -1,132 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.OTPFragment">
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.OTPFragment">
 
-    <TextView
-        android:id="@+id/otp_tv"
-        android:layout_width="164dp"
-        android:layout_height="50dp"
-        android:fontFamily="@font/montserrat_semibold"
-        android:text="OTP Sent"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.137"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon_imgv"
-        app:layout_constraintVertical_bias="0.232" />
+        <TextView
+            android:id="@+id/otp_tv"
+            android:layout_width="180dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="OTP Sent"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toTopOf="@+id/otp_desc_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_imgv"
+            app:layout_constraintVertical_bias="0.904" />
 
-    <TextView
-        android:id="@+id/otp_desc_tv"
-        android:layout_width="284dp"
-        android:layout_height="45dp"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="Enter the OTP sent to your mobile number"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.267"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp_tv"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/otp_desc_tv"
+            android:layout_width="284dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="412dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Enter the OTP sent to your mobile number"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedTextField"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="351dp"
-        android:layout_height="82dp"
-        android:layout_marginTop="64dp"
-        android:hint="OTP"
-        android:textColorHint="#006493"
-        app:layout_constraintBottom_toTopOf="@+id/home_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv"
-        app:layout_constraintVertical_bias="0.0">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="309dp"
+            android:layout_height="94dp"
+            android:layout_marginStart="30dp"
+            android:hint="OTP"
+            android:textColorHint="#006493"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv"
+            app:layout_constraintVertical_bias="0.0">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/otp_field"
-            android:layout_width="match_parent"
-            android:layout_height="68dp"
-            tools:ignore="SpeakableTextPresentCheck" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/otp_field"
+                android:layout_width="306dp"
+                android:layout_height="62dp"
+                android:inputType="phone"
+                tools:ignore="SpeakableTextPresentCheck" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/home_btn"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:background="@drawable/contained_button"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="Continue"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="5dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="132dp"
+            android:layout_marginBottom="56dp"
+            android:background="@drawable/contained_button"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.905" />
 
-    <Button
-        android:id="@+id/login_btn"
-        android:layout_width="120dp"
-        android:layout_height="50dp"
-        android:background="@drawable/contained_button"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="login"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.808" />
+        <ImageView
+            android:id="@+id/icon_imgv"
+            android:layout_width="120dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/app_icon_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.047" />
 
-    <ImageView
-        android:id="@+id/icon_imgv"
-        android:layout_width="196dp"
-        android:layout_height="58dp"
-        android:src="@drawable/app_icon_black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="168dp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="Request Another OTP"
+            android:textColor="#006493"
+            app:layout_constraintBottom_toTopOf="@+id/login_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/montserrat_light"
-        android:text="Request Another OTP"
-        android:textColor="#006493"
-        app:layout_constraintBottom_toTopOf="@+id/home_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedTextField"
-        app:layout_constraintVertical_bias="0.053" />
-
-    <TextView
-        android:id="@+id/number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="2dp"
-        android:text="TextView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv" />
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="2dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

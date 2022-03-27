@@ -63,15 +63,6 @@ public class CommonLoginFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         //Assignments
         mnum_temp = view.findViewById(R.id.mnum);
-        view.findViewById(R.id.continue_bt).setOnClickListener(
-                textView -> {
-                    MainActivity activity = (MainActivity) getActivity();
-                    NavController navController = activity.getNavController();
-                    if(navController != null) {
-                        navController.navigate(R.id.action_commonLoginFragment_to_OTPFragment);
-                    }
-                }
-        );
         view.findViewById(R.id.send_otp).setOnClickListener(
                 textView -> {
                     String mobile = mnum_temp.getText().toString().trim();

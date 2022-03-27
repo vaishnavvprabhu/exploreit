@@ -58,7 +58,7 @@
 
 
         <TextView
-            android:id="@+id/contactNo"
+            android:id="@+id/num"
             android:layout_width="132dp"
             android:layout_height="22dp"
             android:layout_marginStart="30dp"
@@ -345,8 +345,6 @@
             </com.google.android.material.card.MaterialCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

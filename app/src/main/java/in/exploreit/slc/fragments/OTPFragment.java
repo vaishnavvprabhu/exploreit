@@ -50,15 +50,6 @@ public class OTPFragment extends Fragment {
         tv.setText(getArguments().getString("number"));
         //Firebase Related
         mAuth = FirebaseAuth.getInstance();
-        view.findViewById(R.id.home_btn).setOnClickListener(
-                textView -> {
-                    MainActivity activity = (MainActivity) getActivity();
-                    NavController navController = activity.getNavController();
-                    if(navController != null) {
-                        navController.navigate(R.id.action_OTPFragment_to_homeFragment);
-                    }
-                }
-        );
         view.findViewById(R.id.login_btn).setOnClickListener(
                 textView -> {
                     String verificationId = getArguments().getString("verifid");
