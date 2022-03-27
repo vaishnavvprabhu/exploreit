@@ -29,11 +29,12 @@
 
         <TextView
             android:id="@+id/content_textview"
-            android:layout_width="284dp"
-            android:layout_height="45dp"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="412dp"
-            android:fontFamily="@font/montserrat_semibold"
+            android:fontFamily="@font/montserrat_regular"
             android:text="Enter your mobile number in order to continue using this app"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,8 +60,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/outlinedTextField"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="309dp"
-            android:layout_height="94dp"
+            android:layout_width="344dp"
+            android:layout_height="73dp"
             android:layout_marginStart="30dp"
             android:hint=" Mobile Number"
             app:hintTextColor="#006493"
@@ -69,12 +70,12 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/content_textview"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintVertical_bias="0.042">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/mnum"
-                android:layout_width="306dp"
-                android:layout_height="62dp"
+                android:layout_width="331dp"
+                android:layout_height="wrap_content"
                 android:inputType="phone"
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
