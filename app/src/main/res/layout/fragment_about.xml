@@ -12,10 +12,38 @@
 
 
         <!-- TODO: Update blank fragment layout -->
+
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarAboutus"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center"
+                android:background="#FFFFFF"
+                android:gravity="center_horizontal"
+                app:theme="@style/ToolbarTheme"
+                app:titleTextColor="@color/black"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="-2dp">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="About Us"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
+
+
+            </androidx.appcompat.widget.Toolbar>
 
             <TextView
                 android:id="@+id/aboutus_desc"
@@ -34,24 +62,6 @@
                 app:layout_constraintHorizontal_bias="0.057"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/exploreit_icon" />
-
-            <TextView
-                android:id="@+id/aboutusHead"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginHorizontal="45dp"
-                android:layout_marginVertical="5dp"
-                android:fontFamily="@font/montserrat_semibold"
-                android:gravity="top"
-                android:text="About Us"
-                android:textColor="#000000"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toTopOf="@+id/aboutUs_img"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/exploreit_icon"
@@ -78,7 +88,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/aboutusHead" />
+                app:layout_constraintTop_toBottomOf="@id/toolbarAboutus" />
 
             <Button
                 android:id="@+id/contribute_btn"

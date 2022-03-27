@@ -34,9 +34,9 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         //Firebase Related
         mAuth = FirebaseAuth.getInstance();
-        number = view.findViewById(R.id.num);
+        number = view.findViewById(R.id.contactNo);
         mAuth.getCurrentUser();
-        number.setText(mAuth.getCurrentUser().getPhoneNumber());
+        //number.setText(mAuth.getCurrentUser().getPhoneNumber());
         view.findViewById(R.id.aboutUsParent).setOnClickListener(
                 textView -> {
                     MainActivity activity = (MainActivity) getActivity();
