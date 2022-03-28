@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/commonAuthFragment">
+    app:startDestination="@id/commonLoginFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -23,13 +23,13 @@
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
-        android:id="@+id/commonAuthFragment"
-        android:name="in.exploreit.slc.fragments.CommonAuthFragment"
+        android:id="@+id/commonLoginFragment"
+        android:name="in.exploreit.slc.fragments.CommonLoginFragment"
         android:label="fragment_common_auth"
-        tools:layout="@layout/fragment_common_auth" >
+        tools:layout="@layout/fragment_common_login" >
         <action
-            android:id="@+id/action_commonAuthFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
+            android:id="@+id/action_commonLoginFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
@@ -51,5 +51,14 @@
         <argument
             android:name="WebViewSource"
             app:argType="in.exploreit.slc.data.WebViewSource" />
+    </fragment>
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="in.exploreit.slc.fragments.OTPFragment"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" >
+        <action
+            android:id="@+id/action_OTPFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>
