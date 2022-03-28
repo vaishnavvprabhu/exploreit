@@ -1,13 +1,13 @@
 package in.exploreit.slc.data.models;
 
-public class NewProjects {
+public class NewProject implements ListItem{
     private String name;
     private String img;
     private String desc;
     private int year;
     private String link;
 
-    public NewProjects(){
+    public NewProject(){
 
 /*            public exercises(String name, String time_taken, String image){
             this.name = name;
@@ -54,4 +54,14 @@ public class NewProjects {
     public void setLink(String link) {
         this.link = link;
     }
+
+    @Override public String getTitle() { return name; }
+
+    @Override public String getDescription() { return desc; }
+
+    @Override public int getTimeStamp() { return year; }
+
+    @Override public String getImageUrl() { return img; }
+
+    @Override public int getNumberOfDescLines() { return 3; }
 }
