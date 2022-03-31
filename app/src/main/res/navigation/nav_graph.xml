@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/listFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -40,17 +40,8 @@
             android:name="Source"
             app:argType="in.exploreit.slc.data.ListSource" />
         <action
-            android:id="@+id/action_listFragment_to_customWebViewFragment"
-            app:destination="@id/customWebViewFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/customWebViewFragment"
-        android:name="in.exploreit.slc.fragments.CustomWebViewFragment"
-        android:label="fragment_custom_web_view"
-        tools:layout="@layout/fragment_custom_web_view" >
-        <argument
-            android:name="WebViewSource"
-            app:argType="in.exploreit.slc.data.WebViewSource" />
+            android:id="@+id/action_listFragment_to_eventDialogFragment"
+            app:destination="@id/eventDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/OTPFragment"
@@ -61,4 +52,12 @@
             android:id="@+id/action_OTPFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/eventDialogFragment"
+        android:name="in.exploreit.slc.fragments.EventDialogFragment"
+        android:label="EventDialogFragment" >
+        <argument
+            android:name="event_position"
+            app:argType="integer" />
+    </dialog>
 </navigation>

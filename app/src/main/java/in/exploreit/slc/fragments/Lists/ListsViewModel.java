@@ -19,26 +19,18 @@ import in.exploreit.slc.utils.Constants;
 
 public class ListsViewModel extends ViewModel {
     final private FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-    List<ListItem> getListItems() {
-        List<ListItem> list = new ArrayList<>();
-        list.add(new Event("Title", "Desc", "https://i.imgur.com/KoRBWXM.jpeg", 500));
-        list.add(new Event("Title", "Desc", "https://i.imgur.com/KoRBWXM.jpeg", 500));
-        list.add(new Event("Title", "Desc", "https://i.imgur.com/KoRBWXM.jpeg", 500));
-        list.add(new Event("Title", "Desc", "https://i.imgur.com/KoRBWXM.jpeg", 500));
-        list.add(new Event("Title", "Desc", "https://i.imgur.com/KoRBWXM.jpeg", 500));
-        list.add(new Event("Title", "Desc", "https://i.imgur.com/KoRBWXM.jpeg", 500));
-        list.add(new Event("Title", "Desc", "https://i.imgur.com/KoRBWXM.jpeg", 500));
-        return list;
-    }
+    public List<Event> latestEvents = new ArrayList<>();
 
     void getAllEvents(ListResultCallback callback) {
         firestore.collection("events").get()
                 .addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 List<ListItem> list = new ArrayList<>();
+                latestEvents = new ArrayList<>();
                 for (QueryDocumentSnapshot document : task.getResult()) {
                     Event event = document.toObject(Event.class);
                     list.add(event);
+                    latestEvents.add(event);
                 }
                 callback.responseReturned(list);
             } else {
@@ -65,7 +57,7 @@ public class ListsViewModel extends ViewModel {
                 });
     }
 
-    void getAllNewProjects(ListResultCallback callback) {
+    void getAllOngoingProjects(ListResultCallback callback) {
         firestore.collection("new_projects").get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {

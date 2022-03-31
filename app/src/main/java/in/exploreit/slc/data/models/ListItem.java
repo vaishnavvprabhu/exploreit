@@ -5,5 +5,6 @@ public interface ListItem {
     String getDescription();
     int getTimeStamp();
     String getImageUrl();
+    String getTargetUrl();
     int getNumberOfDescLines();
 }

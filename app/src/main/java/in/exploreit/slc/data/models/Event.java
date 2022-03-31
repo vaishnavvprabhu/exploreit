@@ -99,4 +99,6 @@ public class Event implements ListItem{
     @Override public String getImageUrl() { return img; }
 
     @Override public int getNumberOfDescLines() { return 2; }
+
+    @Override public String getTargetUrl() { return venue; }
 }

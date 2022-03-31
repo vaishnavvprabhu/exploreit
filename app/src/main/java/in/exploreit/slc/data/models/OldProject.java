@@ -64,4 +64,6 @@ public class OldProject implements ListItem{
     @Override public String getImageUrl() { return img; }
 
     @Override public int getNumberOfDescLines() { return 3; }
+
+    @Override public String getTargetUrl() { return link; }
 }

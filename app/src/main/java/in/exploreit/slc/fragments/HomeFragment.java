@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
+import in.exploreit.slc.data.ListSource;
 
 public class HomeFragment extends Fragment {
     private FirebaseAuth mAuth;
@@ -46,5 +48,27 @@ public class HomeFragment extends Fragment {
                     }
                 }
         );
+
+        view.findViewById(R.id.eventsParent).setOnClickListener(button -> {
+            navigateToListFragment(ListSource.EVENTS);
+        });
+        view.findViewById(R.id.oldProjParent).setOnClickListener(button -> {
+            navigateToListFragment(ListSource.OLD_PROJECTS);
+        });
+        view.findViewById(R.id.ongoingProjParent).setOnClickListener(button -> {
+            navigateToListFragment(ListSource.ON_GOING_PROJECTS);
+        });
+    }
+
+    void navigateToListFragment(ListSource listSource) {
+        MainActivity activity = (MainActivity) getActivity();
+        NavController navController = activity.getNavController();
+        if(navController != null) {
+            HomeFragmentDirections.ActionHomeFragmentToListFragment action =
+                    HomeFragmentDirections.actionHomeFragmentToListFragment(listSource);
+            navController.navigate(action);
+        } else {
+            Toast.makeText(requireContext(), "Something went wrong while navigating!", Toast.LENGTH_LONG).show();
+        }
     }
 }
