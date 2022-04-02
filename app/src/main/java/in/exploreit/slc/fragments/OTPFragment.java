@@ -96,7 +96,7 @@ public class OTPFragment extends Fragment {
     }
 
     void navigateToHome() {
-        MainActivity activity = (MainActivity) getActivity();
+        MainActivity activity = (MainActivity) requireActivity();
         NavController navController = activity.getNavController();
         if (navController != null) {
             navController.navigate(R.id.action_OTPFragment_to_homeFragment);

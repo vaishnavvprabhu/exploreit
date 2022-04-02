@@ -47,11 +47,19 @@ public class CommonLoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //Hide Action Bar
-        ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+        ((AppCompatActivity) getActivity()).getSupportActionBar().hide(); //Hide Action Bar
         sharedViewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
-        // Inflate the layout for this fragment
+        cleanBackStack();
+
         return inflater.inflate(R.layout.fragment_common_login, container, false);
+    }
+
+    private void cleanBackStack() {
+        MainActivity activity = (MainActivity) requireActivity();
+        NavController navController = activity.getNavController();
+        if(navController != null) {
+            navController.clearBackStack(R.id.commonLoginFragment);
+        }
     }
 
     @Override
@@ -153,7 +161,7 @@ public class CommonLoginFragment extends Fragment {
     }
 
     public void commonLoginFragmentToOTPFragment(String verificationId, String number) {
-        MainActivity activity = (MainActivity) getActivity();
+        MainActivity activity = (MainActivity) requireActivity();
         NavController navController = activity.getNavController();
         if(navController != null) {
             CommonLoginFragmentDirections.ActionCommonLoginFragmentToOTPFragment action =

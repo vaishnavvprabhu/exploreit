@@ -11,6 +11,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.NavGraph;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
 
     private NavController navController;
@@ -25,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkIfLoggedIn() {
         // TODO replace this hardcoded boolean with actual user checks
-        boolean isLoggedIn = false;
+        boolean isLoggedIn = FirebaseAuth.getInstance().getCurrentUser() != null;
         navController = ((NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment)).getNavController();
         NavGraph navGraph = navController.getNavInflater().inflate(R.navigation.nav_graph);
-//        if(isLoggedIn) {
-//            navGraph.setStartDestination(R.id.homeFragment);
-//        } else navGraph.setStartDestination(R.id.commonLoginFragment);
+        if(isLoggedIn) {
+            navGraph.setStartDestination(R.id.homeFragment);
+        } else navGraph.setStartDestination(R.id.commonLoginFragment);
         navController.setGraph(navGraph);
     }
 

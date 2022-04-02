@@ -19,7 +19,7 @@
         <action
             android:id="@+id/action_homeFragment_to_commonLoginFragment"
             app:destination="@id/commonLoginFragment"
-            app:popUpTo="@id/commonLoginFragment"
+            app:popUpTo="@id/homeFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment

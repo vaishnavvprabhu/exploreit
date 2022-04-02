@@ -65,7 +65,7 @@ public class ListFragment extends Fragment implements ListItemClickInterface, Li
     @Override
     public void onListItemClicked(String pageUrl, int position) {
         if(hasDialogFragment) {
-            MainActivity activity = (MainActivity) getActivity();
+            MainActivity activity = (MainActivity) requireActivity();
             NavController navController = activity.getNavController();
             if(navController != null) {
                 ListFragmentDirections.ActionListFragmentToEventDialogFragment action =
