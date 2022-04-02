@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
@@ -21,7 +22,6 @@ import in.exploreit.slc.data.ListSource;
 
 public class HomeFragment extends Fragment {
     private FirebaseAuth mAuth;
-    private TextView number;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,17 +36,20 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         //Firebase Related
         mAuth = FirebaseAuth.getInstance();
-        number = view.findViewById(R.id.num);
-        mAuth.getCurrentUser();
-        //number.setText(mAuth.getCurrentUser().getPhoneNumber());
+        FirebaseUser user = mAuth.getCurrentUser();
+        TextView phoneNumber = view.findViewById(R.id.phone_number);
+        if(user != null) {
+            phoneNumber.setText(user.getPhoneNumber());
+        }
+
         view.findViewById(R.id.aboutUsParent).setOnClickListener(
-                textView -> {
-                    MainActivity activity = (MainActivity) getActivity();
-                    NavController navController = activity.getNavController();
-                    if(navController != null) {
-                        navController.navigate(R.id.action_homeFragment_to_aboutFragment);
-                    }
+            textView -> {
+                MainActivity activity = (MainActivity) getActivity();
+                NavController navController = activity.getNavController();
+                if(navController != null) {
+                    navController.navigate(R.id.action_homeFragment_to_aboutFragment);
                 }
+            }
         );
 
         view.findViewById(R.id.eventsParent).setOnClickListener(button -> {
@@ -58,6 +61,15 @@ public class HomeFragment extends Fragment {
         view.findViewById(R.id.ongoingProjParent).setOnClickListener(button -> {
             navigateToListFragment(ListSource.ON_GOING_PROJECTS);
         });
+    }
+
+    void signOut() {
+        FirebaseAuth.getInstance().signOut();
+        MainActivity activity = (MainActivity) getActivity();
+        NavController navController = activity.getNavController();
+        if(navController != null) {
+            navController.navigate(R.id.action_homeFragment_to_commonLoginFragment);
+        }
     }
 
     void navigateToListFragment(ListSource listSource) {
