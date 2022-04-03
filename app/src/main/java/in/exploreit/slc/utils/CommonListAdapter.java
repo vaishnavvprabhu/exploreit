@@ -27,8 +27,7 @@ public class CommonListAdapter extends ListAdapter<ListItem, CommonListAdapter.L
         this.listItemClickCallback = ListItemClickInterface;
     }
 
-    @NonNull
-    @Override
+    @NonNull @Override
     public ListItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ListItemViewHolder(LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false));
