@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 import in.exploreit.slc.R;
+import in.exploreit.slc.data.models.Event;
 import in.exploreit.slc.data.models.ListItem;
 
 public class CommonListAdapter extends ListAdapter<ListItem, CommonListAdapter.ListItemViewHolder> {
@@ -30,7 +31,7 @@ public class CommonListAdapter extends ListAdapter<ListItem, CommonListAdapter.L
     @Override
     public ListItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ListItemViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.events, parent, false));
+                .inflate(R.layout.list_item, parent, false));
     }
 
     @Override
@@ -41,25 +42,37 @@ public class CommonListAdapter extends ListAdapter<ListItem, CommonListAdapter.L
 
     class ListItemViewHolder extends RecyclerView.ViewHolder {
         TextView title;
+        TextView desc;
+        TextView hours;
         ImageView image;
         CardView rootCardView;
 
         public ListItemViewHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.ev_name);
-            title.setSelected(true); //for ellip marquee to work
-            image = itemView.findViewById(R.id.ev_imageview);
+            title = itemView.findViewById(R.id.item_title);
+            desc = itemView.findViewById(R.id.item_desc);
+            hours = itemView.findViewById(R.id.hours);
+            image = itemView.findViewById(R.id.item_img);
             rootCardView = (CardView) itemView.getRootView();
         }
 
-        public void bind(ListItem ListItem) {
+        public void bind(ListItem listItem) {
             // TODO add other data types once they are added in the layout
-            title.setText(ListItem.getTitle());
-            String imageUrl = String.valueOf(ListItem.getImageUrl());
+            title.setText(listItem.getTitle());
+            title.setSelected(true); //for ellip marquee to work
+            desc.setText(listItem.getDescription());
+            desc.setMaxLines(listItem.getNumberOfDescLines());
+
+            String imageUrl = String.valueOf(listItem.getImageUrl());
             Glide.with(image).load(imageUrl).centerCrop().into(image);
+
+            if(listItem instanceof Event) {
+                hours.setText(hours.getContext().getString(R.string.hours_template, listItem.getTimeStamp()));
+            } else {
+                hours.setText(String.valueOf(listItem.getTimeStamp()));
+            }
+
             rootCardView.setOnClickListener(v -> {
-                // TODO change this hardcoded url with page url which needs to be added in Event class
-                ListItem listItem = getItem(getAbsoluteAdapterPosition());
                 listItemClickCallback.onListItemClicked(listItem.getTargetUrl(), getAbsoluteAdapterPosition());
             });
         }
