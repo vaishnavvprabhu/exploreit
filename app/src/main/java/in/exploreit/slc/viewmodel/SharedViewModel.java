@@ -7,5 +7,4 @@ import in.exploreit.slc.data.models.AuthStatus;
 
 public class SharedViewModel extends ViewModel {
     public MutableLiveData<AuthStatus> hasAuthSucceeded = new MutableLiveData<>(AuthStatus.LOADING);
-
 }
