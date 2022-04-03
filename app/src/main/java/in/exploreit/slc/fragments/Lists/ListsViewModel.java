@@ -15,7 +15,7 @@ import in.exploreit.slc.data.models.ListItem;
 import in.exploreit.slc.data.models.ListResultCallback;
 import in.exploreit.slc.data.models.NewProject;
 import in.exploreit.slc.data.models.OldProject;
-import in.exploreit.slc.utils.Constants;
+import in.exploreit.slc.utils.Utils;
 
 public class ListsViewModel extends ViewModel {
     final private FirebaseFirestore firestore = FirebaseFirestore.getInstance();
@@ -34,7 +34,7 @@ public class ListsViewModel extends ViewModel {
                 }
                 callback.responseReturned(list);
             } else {
-                Log.d(Constants.TAG, "Error getting documents: ", task.getException());
+                Log.d(Utils.TAG, "Error getting documents: ", task.getException());
                 callback.responseReturned(null);
             }
         });
@@ -51,7 +51,7 @@ public class ListsViewModel extends ViewModel {
                         }
                         callback.responseReturned(list);
                     } else {
-                        Log.d(Constants.TAG, "Error getting documents: ", task.getException());
+                        Log.d(Utils.TAG, "Error getting documents: ", task.getException());
                         callback.responseReturned(null);
                     }
                 });
@@ -68,7 +68,7 @@ public class ListsViewModel extends ViewModel {
                         }
                         callback.responseReturned(list);
                     } else {
-                        Log.d(Constants.TAG, "Error getting documents: ", task.getException());
+                        Log.d(Utils.TAG, "Error getting documents: ", task.getException());
                         callback.responseReturned(null);
                     }
                 });

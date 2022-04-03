@@ -19,7 +19,7 @@
             android:text="OTP Sent"
             android:textColor="@color/black"
             android:textSize="35sp"
-            app:layout_constraintBottom_toTopOf="@+id/otp_desc_tv"
+            app:layout_constraintBottom_toTopOf="@+id/otp_desc"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
             app:layout_constraintVertical_bias="0.904" />
 
         <TextView
-            android:id="@+id/otp_desc_tv"
+            android:id="@+id/otp_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -41,18 +41,18 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
+            android:id="@+id/edit_text_parent"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="344dp"
             android:layout_height="73dp"
             android:layout_marginStart="30dp"
             android:hint="OTP"
             android:textColorHint="#006493"
-            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintBottom_toTopOf="@+id/resend_otp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv"
+            app:layout_constraintTop_toBottomOf="@+id/otp_desc"
             app:layout_constraintVertical_bias="0.0">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -98,7 +98,7 @@
             app:layout_constraintVertical_bias="0.047" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/resend_otp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -110,7 +110,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_parent" />
 
         <TextView
             android:id="@+id/number"
@@ -120,8 +120,7 @@
             android:layout_marginTop="2dp"
             android:text=""
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/otp_desc_tv" />
-
+            app:layout_constraintTop_toBottomOf="@+id/otp_desc" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

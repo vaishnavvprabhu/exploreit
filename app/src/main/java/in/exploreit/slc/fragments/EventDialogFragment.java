@@ -19,7 +19,7 @@ import in.exploreit.slc.R;
 import in.exploreit.slc.data.models.Event;
 import in.exploreit.slc.databinding.FragmentDialogBinding;
 import in.exploreit.slc.fragments.Lists.ListsViewModel;
-import in.exploreit.slc.utils.Constants;
+import in.exploreit.slc.utils.Utils;
 
 public class EventDialogFragment extends DialogFragment {
 
@@ -64,9 +64,12 @@ public class EventDialogFragment extends DialogFragment {
             binding.contentDate.setText(event.getDate_time().toString());
             binding.contentVenue.setText(event.getVenue());
             binding.contentDate.setText(event.getDate_time().toString());
-            binding.contentPrice.setText(event.getPrice());
+            binding.contentPrice.setText(String.valueOf(event.getPrice()));
+            binding.attendeventBtn.setOnClickListener(button -> {
+                Utils.openWebpage(this.requireContext(), event.getTargetUrl());
+            });
         } catch (Exception e) {
-            Log.d(Constants.TAG, "onViewCreated: " + e);
+            Log.d(Utils.TAG, "onViewCreated: " + e);
             Toast.makeText(requireActivity(), "Could not find Event!", Toast.LENGTH_SHORT).show();
         }
     }

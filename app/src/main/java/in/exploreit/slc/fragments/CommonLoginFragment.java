@@ -1,6 +1,6 @@
 package in.exploreit.slc.fragments;
 
-import static in.exploreit.slc.utils.Constants.TAG;
+import static in.exploreit.slc.utils.Utils.TAG;
 
 import android.os.Bundle;
 import android.util.Log;
