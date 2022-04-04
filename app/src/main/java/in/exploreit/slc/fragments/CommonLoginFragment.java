@@ -1,6 +1,6 @@
 package in.exploreit.slc.fragments;
 
-import static in.exploreit.slc.utils.Constants.TAG;
+import static in.exploreit.slc.utils.Utils.TAG;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -38,8 +38,6 @@ public class CommonLoginFragment extends Fragment {
     private FirebaseAuth mAuth;
     private EditText numberEditText;
     private String number;
-
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     public PhoneAuthProvider.ForceResendingToken mResendToken;
 
     private SharedViewModel sharedViewModel;
@@ -83,48 +81,6 @@ public class CommonLoginFragment extends Fragment {
                             "re-CAPTCHA verification. Kindly Do Not Exit.", Toast.LENGTH_LONG).show();
                 }
         );
-
-        mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-            @Override
-            public void onVerificationCompleted(PhoneAuthCredential credential) {
-                // This callback will be invoked in two situations:
-                // 1 - Instant verification. In some cases the phone number can be instantly
-                //     verified without needing to send or enter a verification code.
-                // 2 - Auto-retrieval. On some devices Google Play services can automatically
-                //     detect the incoming verification SMS and perform verification without
-                //     user action.
-                Log.d(TAG, "onVerificationCompleted:" + credential);
-                sharedViewModel.hasAuthSucceeded.postValue(AuthStatus.SUCCESS);
-                signInWithPhoneAuthCredential(credential);
-            }
-
-            @Override
-            public void onVerificationFailed(FirebaseException e) {
-                // This callback is invoked in an invalid request for verification is made,
-                // for instance if the the phone number format is not valid.
-                Log.w(TAG, "onVerificationFailed", e);
-                sharedViewModel.hasAuthSucceeded.postValue(AuthStatus.FAILURE);
-                if(e instanceof FirebaseAuthInvalidCredentialsException) {
-                    // Invalid request
-                    //TODO: Change the error toasts when deploying
-                    Toast.makeText(getActivity(), "Invalid request!", Toast.LENGTH_LONG).show();
-                } else if(e instanceof FirebaseTooManyRequestsException) {
-                    // The SMS quota for the project has been exceeded
-                    Toast.makeText(getActivity(), "Server error! Please try again in a few hours!", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onCodeSent(@NonNull String verificationId,
-                                   @NonNull PhoneAuthProvider.ForceResendingToken token) {
-                // The SMS verification code has been sent to the provided phone number, we
-                // now need to ask the user to enter the code and then construct a credential
-                // by combining the code with a verification ID.
-                Log.d(TAG, "onCodeSent:" + verificationId);
-                mResendToken = token;
-                commonLoginFragmentToOTPFragment(verificationId, number);
-            }
-        };
     }
 
     private void sendOTP(String num){
@@ -133,7 +89,7 @@ public class CommonLoginFragment extends Fragment {
                         .setPhoneNumber(num) // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(requireActivity()) // Activity (for callback binding)
-                        .setCallbacks(mCallbacks) // OnVerificationStateChangedCallbacks
+                        .setCallbacks(getAuthCallbacks()) // OnVerificationStateChangedCallbacks
                         .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
@@ -160,12 +116,57 @@ public class CommonLoginFragment extends Fragment {
                 });
     }
 
+    PhoneAuthProvider.OnVerificationStateChangedCallbacks getAuthCallbacks() {
+        return new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+            @Override
+            public void onVerificationCompleted(PhoneAuthCredential credential) {
+                // This callback will be invoked in two situations:
+                // 1 - Instant verification. In some cases the phone number can be instantly
+                //     verified without needing to send or enter a verification code.
+                // 2 - Auto-retrieval. On some devices Google Play services can automatically
+                //     detect the incoming verification SMS and perform verification without
+                //     user action.
+                Log.d(TAG, "onVerificationCompleted:" + credential);
+                sharedViewModel.hasAuthSucceeded.postValue(AuthStatus.SUCCESS);
+                signInWithPhoneAuthCredential(credential);
+            }
+
+            @Override
+            public void onVerificationFailed(FirebaseException e) {
+                // This callback is invoked in an invalid request for verification is made,
+                // for instance if the the phone number format is not valid.
+                Log.w(TAG, "onVerificationFailed", e);
+                sharedViewModel.hasAuthSucceeded.postValue(AuthStatus.FAILURE);
+                if(e instanceof FirebaseAuthInvalidCredentialsException) {
+                    // Invalid request
+                    //TODO: Change the error toasts when deploying
+                    Toast.makeText(getActivity(), "Invalid request!", Toast.LENGTH_LONG).show();
+                } else if(e instanceof FirebaseTooManyRequestsException) {
+                    // The SMS quota for the project has been exceeded
+                    Toast.makeText(getActivity(), "Too Many requests! Please try again in a few hours!", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onCodeSent(@NonNull String verificationId,
+                                   @NonNull PhoneAuthProvider.ForceResendingToken token) {
+                // The SMS verification code has been sent to the provided phone number, we
+                // now need to ask the user to enter the code and then construct a credential
+                // by combining the code with a verification ID.
+                Log.d(TAG, "onCodeSent:" + verificationId);
+                mResendToken = token;
+                commonLoginFragmentToOTPFragment(verificationId, number);
+            }
+        };
+    }
+
     public void commonLoginFragmentToOTPFragment(String verificationId, String number) {
         MainActivity activity = (MainActivity) requireActivity();
         NavController navController = activity.getNavController();
         if(navController != null) {
             CommonLoginFragmentDirections.ActionCommonLoginFragmentToOTPFragment action =
-                    CommonLoginFragmentDirections.actionCommonLoginFragmentToOTPFragment(number, verificationId);
+                    CommonLoginFragmentDirections.actionCommonLoginFragmentToOTPFragment(number,
+                            verificationId, mResendToken);
             navController.navigate(action);
         }
     }

@@ -62,6 +62,9 @@
         <argument
             android:name="verify_id"
             app:argType="string" />
+        <argument
+            android:name="resend_token"
+            app:argType="com.google.firebase.auth.PhoneAuthProvider$ForceResendingToken" />
     </fragment>
     <dialog
         android:id="@+id/eventDialogFragment"
