@@ -1,6 +1,5 @@
 package in.exploreit.slc.fragments.Lists;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,7 +9,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
@@ -24,8 +22,8 @@ import in.exploreit.slc.data.ListSource;
 import in.exploreit.slc.data.models.ListItem;
 import in.exploreit.slc.data.models.ListResultCallback;
 import in.exploreit.slc.utils.CommonListAdapter;
-import in.exploreit.slc.utils.Constants;
 import in.exploreit.slc.utils.ListItemClickInterface;
+import in.exploreit.slc.utils.Utils;
 
 public class ListFragment extends Fragment implements ListItemClickInterface, ListResultCallback {
 
@@ -77,9 +75,7 @@ public class ListFragment extends Fragment implements ListItemClickInterface, Li
         } else if(pageUrl == null) {
             Toast.makeText(requireContext(), "Error while opening link!", Toast.LENGTH_SHORT).show();
         } else {
-            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-            CustomTabsIntent customTabsIntent = builder.build();
-            customTabsIntent.launchUrl(this.requireContext(), Uri.parse(pageUrl));
+            Utils.openWebpage(this.requireContext(), pageUrl);
         }
     }
 
@@ -87,17 +83,17 @@ public class ListFragment extends Fragment implements ListItemClickInterface, Li
     public void responseReturned(List<ListItem> list) {
         if(list == null) {
             // TODO show error indicator instead of recycler view
-            Log.d(Constants.TAG, "responseReturned: something went wrong");
+            Log.d(Utils.TAG, "responseReturned: something went wrong");
             Toast.makeText(requireContext(), "Error!", Toast.LENGTH_SHORT).show();
             return;
         }
         if(list.isEmpty()) {
             // TODO show empty indicator instead of recycler view
-            Log.d(Constants.TAG, "responseReturned: no items found!");
+            Log.d(Utils.TAG, "responseReturned: no items found!");
             Toast.makeText(requireContext(), "Empty List!", Toast.LENGTH_SHORT).show();
         } else {
             commonListAdapter.submitList(list);
-            Log.d(Constants.TAG, "responseReturned:" + list.size() + " items found!");
+            Log.d(Utils.TAG, "responseReturned:" + list.size() + " items found!");
         }
     }
 }

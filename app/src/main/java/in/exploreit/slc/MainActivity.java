@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void checkIfLoggedIn() {
-        // TODO replace this hardcoded boolean with actual user checks
         boolean isLoggedIn = FirebaseAuth.getInstance().getCurrentUser() != null;
         navController = ((NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment)).getNavController();

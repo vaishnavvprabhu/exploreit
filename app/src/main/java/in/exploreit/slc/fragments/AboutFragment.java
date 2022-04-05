@@ -19,7 +19,7 @@ public class AboutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_about, container, false);
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbarExploreiT);
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbarAboutus);
 
         toolbar.setNavigationIcon(R.drawable.back_icon);
         toolbar.setNavigationOnClickListener(backButton -> getActivity().onBackPressed());

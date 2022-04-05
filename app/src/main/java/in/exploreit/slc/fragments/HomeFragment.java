@@ -63,7 +63,7 @@ public class HomeFragment extends Fragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
         builder.setMessage("Are you sure you want to logout?").setTitle("We will miss you!");
 
-        builder.setCancelable(false)
+        builder.setCancelable(true)
                 .setPositiveButton("Yes", (dialog, id) -> {
                     FirebaseAuth.getInstance().signOut();
                     MainActivity activity = (MainActivity) requireActivity();
