@@ -5,10 +5,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
@@ -26,14 +28,20 @@ import in.exploreit.slc.utils.ListItemClickInterface;
 import in.exploreit.slc.utils.Utils;
 
 public class ListFragment extends Fragment implements ListItemClickInterface, ListResultCallback {
-
+    TextView title;
     CommonListAdapter commonListAdapter;
     boolean hasDialogFragment = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_list, container, false);
+        //return inflater.inflate(R.layout.fragment_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_list, container, false);
+        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbarExploreiT);
+        toolbar.setNavigationIcon(R.drawable.back_icon);
+        toolbar.setNavigationOnClickListener(backButton -> getActivity().onBackPressed());
+
+        return view;
     }
 
     @Override
@@ -41,14 +49,16 @@ public class ListFragment extends Fragment implements ListItemClickInterface, Li
         ListSource listSource = ListFragmentArgs.fromBundle(getArguments()).getSource();
         ListsViewModel viewModel = new ViewModelProvider(requireActivity()).get(ListsViewModel.class);
         setupRecyclerView(view);
+        title=getActivity().findViewById(R.id.toolbar_title);
         switch (listSource) {
             case EVENTS: {
                 hasDialogFragment = true;
+                title.setText("Events");
                 viewModel.getAllEvents(this);
                 break;
             }
-            case OLD_PROJECTS: viewModel.getAllOldProjects(this); break;
-            case ON_GOING_PROJECTS:viewModel.getAllOngoingProjects(this); break;
+            case OLD_PROJECTS: viewModel.getAllOldProjects(this); title.setText("Old Projects");break;
+            case ON_GOING_PROJECTS:viewModel.getAllOngoingProjects(this); title.setText("On-Going Projects");break;
         }
         // TODO replace this with loading icon
         Toast.makeText(requireContext(), "Loading!", Toast.LENGTH_SHORT).show();
