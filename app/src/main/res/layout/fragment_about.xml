@@ -19,7 +19,7 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbarAboutus"
+                android:id="@+id/toolbarExploreiT"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="center"
@@ -86,9 +86,8 @@
                 android:src="@drawable/aboutus_img"
                 app:layout_constraintBottom_toTopOf="@+id/exploreit_icon"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbarAboutus" />
+                app:layout_constraintTop_toBottomOf="@id/toolbarExploreiT" />
 
             <Button
                 android:id="@+id/contribute_btn"
