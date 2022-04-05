@@ -4,6 +4,7 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">8dp</item>
     </style>
+
     <style name="DialogFullScreen"
         parent="Theme.MaterialComponents.Dialog">
         <!-- (1)-->

@@ -18,15 +18,15 @@
 
         <LinearLayout
             android:id="@+id/image_parent"
-            android:layout_width="322dp"
-            android:layout_height="119dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.567"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.122">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/item_img"
@@ -40,45 +40,41 @@
 
         <TextView
             android:id="@+id/item_title"
-            android:layout_width="117dp"
-            android:layout_height="27dp"
-            tools:text="Item Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="8dp"
             android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.068"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/image_parent"
-            app:layout_constraintVertical_bias="0.677" />
+            app:layout_constraintTop_toBottomOf="@+id/image_parent"
+            tools:text="Item Title" />
 
         <TextView
             android:id="@+id/item_desc"
-            android:layout_width="316dp"
-            android:layout_height="28dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="17dp"
             android:fontFamily="@font/montserrat_regular"
-            tools:text="Item Description"
             android:textColor="#595959"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.485"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/item_title"
-            app:layout_constraintVertical_bias="0.295" />
+            tools:text="Item Description" />
 
         <TextView
             android:id="@+id/hours"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat_regular"
-            tools:text="00 Hours"
             android:textColor="#595959"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.875"
             app:layout_constraintStart_toEndOf="@+id/item_title"
             app:layout_constraintTop_toBottomOf="@+id/image_parent"
-            app:layout_constraintVertical_bias="0.234" />
+            tools:text="00 Hours" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

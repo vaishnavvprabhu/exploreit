@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,21 +9,23 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/montserrat_semibold"
         android:text="Per Capita Carbon emissions in India are 2.7 tonnes/annum. \n\n To put that into perspective, each person must plant 340 trees to offset this carbon emission. \n\n Project 8 aims to create a carbon neutral India by planting the ideal tree for the right location- based on extensive geographical research and impact."
         android:textAlignment="gravity"
         android:textColor="#232121"
         android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/event_name" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="392dp"
+        android:layout_height="189dp"
         android:layout_margin="9dp"
         android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/attendevent_btn"
@@ -34,68 +34,116 @@
         app:layout_constraintTop_toBottomOf="@+id/content_page">
 
         <TextView
-            android:id="@+id/content_price"
-            android:layout_width="98dp"
-            android:layout_height="54dp"
+            android:id="@+id/pricetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="44dp"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="Price ₹400/-"
+            android:text="Price "
             android:textColor="#232121"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/content_time"
-            app:layout_constraintTop_toBottomOf="@+id/content_venue" />
+            app:layout_constraintStart_toEndOf="@+id/timetext"
+            app:layout_constraintTop_toBottomOf="@+id/venuetext" />
 
         <TextView
-            android:id="@+id/content_time"
-            android:layout_width="98dp"
-            android:layout_height="54dp"
-            android:layout_margin="5dp"
-            android:fontFamily="@font/montserrat_semibold"
-            android:text="Time \n4:30 PM"
-            android:textColor="#232121"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/content_price"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/content_date" />
-
-        <TextView
-            android:id="@+id/content_date"
+            android:id="@+id/timetext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Time "
+            android:textColor="#232121"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pricetext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datetext" />
+
+        <TextView
+            android:id="@+id/datetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/montserrat_semibold"
             android:text="Date"
             android:textColor="#232121"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@id/content_time"
-            app:layout_constraintEnd_toStartOf="@id/content_venue"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/content_venue"
-            android:layout_width="106dp"
-            android:layout_height="54dp"
+            android:id="@+id/venuetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_marginStart="50dp"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="Venue Google Meet"
+            android:text="Venue"
             android:textColor="#232121"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/content_price"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/content_date"
+            app:layout_constraintStart_toEndOf="@+id/datetext"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/content_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="15/03/2022"
+            android:textColor="#232121"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datetext" />
+
+        <TextView
+            android:id="@+id/content_venue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="60dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Google Meet"
+            android:textColor="#232121"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/venuetext" />
+
+        <TextView
+            android:id="@+id/content_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="4:30 pm"
+            android:textColor="#232121"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timetext" />
+
+        <TextView
+            android:id="@+id/content_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            android:text="TextView"
-            app:layout_constraintTop_toBottomOf="@+id/content_date"
-            tools:layout_editor_absoluteX="36dp" />
+            android:layout_marginEnd="90dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:text="Rs. 400/-"
+            android:textColor="#232121"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/content_time"
+            app:layout_constraintTop_toBottomOf="@+id/pricetext" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
@@ -132,8 +180,8 @@
 
     <ImageView
         android:id="@+id/img_event"
-        android:layout_width="417dp"
-        android:layout_height="225dp"
+        android:layout_width="414dp"
+        android:layout_height="260dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/ev1_img"
         android:src="@drawable/gradient_shape"
