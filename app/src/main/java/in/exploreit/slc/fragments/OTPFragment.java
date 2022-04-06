@@ -30,7 +30,7 @@ import java.util.concurrent.TimeUnit;
 
 import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
-import in.exploreit.slc.data.models.AuthStatus;
+import in.exploreit.slc.data.enums.AuthStatus;
 import in.exploreit.slc.viewmodel.SharedViewModel;
 
 public class OTPFragment extends Fragment {
@@ -62,13 +62,17 @@ public class OTPFragment extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         sharedViewModel.hasAuthSucceeded.observe(getViewLifecycleOwner(), authStatus -> {
             switch (authStatus) {
-                case SUCCESS: navigateToHome(); break;
+                case SUCCESS: {
+                    navigateToHome();
+                    Log.d(TAG, "live data changed to success");
+                    break;
+                }
                 case FAILURE: showErrorMessage();
             }
         });
         view.findViewById(R.id.login_btn).setOnClickListener(
                 textView -> {
-                    EditText OTPEditText = ((EditText) view.findViewById(R.id.otp_field));
+                    EditText OTPEditText = view.findViewById(R.id.otp_field);
                     String otp = OTPEditText.getText().toString();
                     if(otp.length() != 6){
                         OTPEditText.setError("Enter a valid mobile");
@@ -90,6 +94,7 @@ public class OTPFragment extends Fragment {
                 .addOnCompleteListener(requireActivity(), task -> {
                     if (task.isSuccessful()) {
                         // Sign in success, update UI with the signed-in user's information
+                        Log.d(TAG, "going to home from success listener");
                         navigateToHome();
                         Log.d(TAG, "signInWithCredential:success");
 //                        FirebaseUser user = task.getResult().getUser();
