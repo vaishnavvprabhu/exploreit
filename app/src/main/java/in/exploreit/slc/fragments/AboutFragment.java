@@ -29,7 +29,7 @@ public class AboutFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         view.findViewById(R.id.contribute_btn).setOnClickListener(button -> {
-            Utils.openWebpage(this.requireContext(), "https://exploreit.in/");
+            Utils.openWebpage(this.requireContext(), "https://exploreit.in/", this.getView());
         });
     }
 }

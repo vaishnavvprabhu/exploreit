@@ -56,7 +56,6 @@ public class CommonListAdapter extends ListAdapter<ListItem, CommonListAdapter.L
         }
 
         public void bind(ListItem listItem) {
-            // TODO add other data types once they are added in the layout
             title.setText(listItem.getTitle());
             title.setSelected(true); //for ellip marquee to work
             desc.setText(listItem.getDescription());
