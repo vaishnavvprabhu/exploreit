@@ -43,7 +43,7 @@
         tools:layout="@layout/fragment_list" >
         <argument
             android:name="Source"
-            app:argType="in.exploreit.slc.data.ListSource" />
+            app:argType="in.exploreit.slc.data.enums.ListSource" />
         <action
             android:id="@+id/action_listFragment_to_eventDialogFragment"
             app:destination="@id/eventDialogFragment" />

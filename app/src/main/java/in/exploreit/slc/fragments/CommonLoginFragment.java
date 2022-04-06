@@ -2,6 +2,7 @@ package in.exploreit.slc.fragments;
 
 import static in.exploreit.slc.utils.Utils.TAG;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -30,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 
 import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
-import in.exploreit.slc.data.models.AuthStatus;
+import in.exploreit.slc.data.enums.AuthStatus;
 import in.exploreit.slc.viewmodel.SharedViewModel;
 
 public class CommonLoginFragment extends Fragment {
@@ -38,6 +39,7 @@ public class CommonLoginFragment extends Fragment {
     private FirebaseAuth mAuth;
     private EditText numberEditText;
     private String number;
+    private ProgressDialog progressDialog;
     public PhoneAuthProvider.ForceResendingToken mResendToken;
 
     private SharedViewModel sharedViewModel;
@@ -76,9 +78,7 @@ public class CommonLoginFragment extends Fragment {
                     }
                     number = "+91" + entered_mobile_number;
                     sendOTP(number);
-                    // TODO remove this toast and show a loader
-                    Toast.makeText(getActivity(), "You shall be redirected to a webpage for " +
-                            "re-CAPTCHA verification. Kindly Do Not Exit.", Toast.LENGTH_LONG).show();
+                    displayProgressDialog();
                 }
         );
     }
@@ -114,6 +114,14 @@ public class CommonLoginFragment extends Fragment {
                         }
                     }
                 });
+    }
+
+    public void displayProgressDialog() {
+        progressDialog = new ProgressDialog(requireContext());
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Sit tight we are working on it!");
+        progressDialog.show();
     }
 
     PhoneAuthProvider.OnVerificationStateChangedCallbacks getAuthCallbacks() {
@@ -161,6 +169,8 @@ public class CommonLoginFragment extends Fragment {
     }
 
     public void commonLoginFragmentToOTPFragment(String verificationId, String number) {
+        if(progressDialog != null) progressDialog.dismiss();
+        Log.d(TAG, "commonLoginFragmentToOTPFragment: going to otp");
         MainActivity activity = (MainActivity) requireActivity();
         NavController navController = activity.getNavController();
         if(navController != null) {

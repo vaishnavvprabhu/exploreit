@@ -29,8 +29,9 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/montserrat_regular"
         android:text="Enter your mobile number in order to continue using this app"
-        app:layout_constraintBottom_toTopOf="@id/login_title"
+        app:layout_constraintBottom_toTopOf="@+id/login_title"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -52,10 +53,10 @@
         android:id="@+id/login_title"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="276dp"
         android:hint=" Mobile Number"
         app:hintTextColor="#006493"
         app:layout_constraintBottom_toTopOf="@+id/send_otp"

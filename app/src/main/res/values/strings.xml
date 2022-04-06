@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">ExploreiT</string>
     <string name="hours_template">%d hours</string>
+    <string name="error_message">Something went wrong</string>
+    <string name="loading_message">Getting them right to you...</string>
+    <string name="empty_message">No items found!</string>
 </resources>

@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
-import in.exploreit.slc.data.ListSource;
+import in.exploreit.slc.data.enums.ListSource;
 import in.exploreit.slc.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {

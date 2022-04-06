@@ -15,7 +15,7 @@
             android:layout_height="match_parent">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbarAboutus"
+                android:id="@+id/toolbarExploreiT"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="center"
@@ -54,44 +54,40 @@
                 android:textColor="#000000"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/contribute_btn"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.057"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/exploreit_icon" />
 
             <ImageView
                 android:id="@+id/exploreit_icon"
                 android:layout_width="128dp"
                 android:layout_height="43dp"
-                android:layout_marginHorizontal="45dp"
                 android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="52dp"
                 android:src="@drawable/app_icon_black"
                 app:layout_constraintBottom_toTopOf="@+id/aboutus_desc"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.014"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/aboutUs_img"
-                app:layout_constraintVertical_bias="0.461" />
+                app:layout_constraintTop_toBottomOf="@+id/aboutUs_img" />
 
             <ImageView
                 android:id="@+id/aboutUs_img"
-                android:layout_width="310dp"
-                android:layout_height="232dp"
-                android:layout_marginHorizontal="22dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:layout_marginVertical="4dp"
+                android:scaleType="fitCenter"
                 android:src="@drawable/aboutus_img"
                 app:layout_constraintBottom_toTopOf="@+id/exploreit_icon"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintHeight_percent="0.3"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/toolbarAboutus" />
+                app:layout_constraintTop_toBottomOf="@id/toolbarExploreiT"
+                app:layout_constraintWidth_percent="1" />
 
             <Button
                 android:id="@+id/contribute_btn"
                 android:layout_width="146dp"
                 android:layout_height="45dp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="5dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/contained_button"
                 android:fontFamily="@font/montserrat_semibold"
                 android:lineSpacingExtra="3sp"
@@ -101,10 +97,9 @@
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/aboutus_desc"
-                app:layout_constraintVertical_bias="0.0" />
+                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
