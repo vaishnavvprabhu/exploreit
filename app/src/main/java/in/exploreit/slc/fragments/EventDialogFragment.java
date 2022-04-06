@@ -15,6 +15,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.bumptech.glide.Glide;
 
+import java.text.SimpleDateFormat;
+
 import in.exploreit.slc.R;
 import in.exploreit.slc.data.models.Event;
 import in.exploreit.slc.databinding.FragmentDialogBinding;
@@ -61,11 +63,14 @@ public class EventDialogFragment extends DialogFragment {
             binding.eventName.setText(event.getName());
             binding.contentPage.setText(event.getDescription());
             Glide.with(this).load(event.getImageUrl()).centerCrop().into(binding.imgEvent);
-            binding.contentDate.setText(event.getDate_time().toString());
-            binding.contentVenue.setText(event.getVenue());
-            binding.contentDate.setText(event.getDate_time().toString());
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
+            binding.contentDate.setText(dateFormat.format(event.getDate_time()));
+//            binding.contentVenue.setText(event.getVenue());
+            binding.contentTime.setText(timeFormat.format(event.getDate_time()));
             binding.contentPrice.setText(String.valueOf(event.getPrice()));
-            binding.attendeventBtn.setOnClickListener(button -> {
+            binding.attendBtn.setOnClickListener(button -> {
                 Utils.openWebpage(this.requireContext(), event.getTargetUrl());
             });
         } catch (Exception e) {

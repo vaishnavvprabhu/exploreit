@@ -2,33 +2,34 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <TextView
         android:id="@+id/content_page"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/montserrat_semibold"
-        android:text="Per Capita Carbon emissions in India are 2.7 tonnes/annum. \n\n To put that into perspective, each person must plant 340 trees to offset this carbon emission. \n\n Project 8 aims to create a carbon neutral India by planting the ideal tree for the right location- based on extensive geographical research and impact."
+        tools:text="Per Capita Carbon emissions in India are 2.7 tonnes/annum. \n\n To put that into perspective, each person must plant 340 trees to offset this carbon emission. \n\n Project 8 aims to create a carbon neutral India by planting the ideal tree for the right location- based on extensive geographical research and impact."
         android:textAlignment="gravity"
+
         android:textColor="#232121"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/event_name" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="392dp"
-        android:layout_height="189dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="9dp"
         android:padding="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/attendevent_btn"
+        app:layout_constraintBottom_toTopOf="@+id/attend_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content_page">
@@ -41,7 +42,7 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="44dp"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="Price "
+            android:text="Price"
             android:textColor="#232121"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -100,7 +101,7 @@
             android:layout_marginStart="72dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="15/03/2022"
+            tools:text="15/03/2022"
             android:textColor="#232121"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +114,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="60dp"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="Google Meet"
+            tools:text="Google Meet"
             android:textColor="#232121"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -125,7 +126,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="72dp"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="4:30 pm"
+            tools:text="4:30 pm"
             android:textColor="#232121"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -137,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="90dp"
             android:fontFamily="@font/montserrat_semibold"
-            android:text="Rs. 400/-"
+            tools:text="Rs. 400/-"
             android:textColor="#232121"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -148,21 +149,20 @@
 
     <TextView
         android:id="@+id/event_name"
-        android:layout_width="146dp"
-        android:layout_height="43dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/montserrat_bold"
-        android:text="Plant 8 "
-        android:textColor="#0C0C0C"
-        android:textSize="35dp"
+        tools:text="Plant 8"
+        android:textColor="@color/black"
+        android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/content_page"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_event" />
 
     <Button
-        android:id="@+id/attendevent_btn"
+        android:id="@+id/attend_btn"
         android:layout_width="230dp"
         android:layout_height="50dp"
         android:layout_marginBottom="56dp"
@@ -181,11 +181,11 @@
     <ImageView
         android:id="@+id/img_event"
         android:layout_width="414dp"
-        android:layout_height="260dp"
+        android:layout_height="200dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/ev1_img"
         android:src="@drawable/gradient_shape"
-        app:layout_constraintBottom_toTopOf="@+id/event_name"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -195,14 +195,10 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:foregroundTint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/img_event"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128"
         app:srcCompat="@drawable/white_cross" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
