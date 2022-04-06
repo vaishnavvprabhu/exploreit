@@ -1,5 +1,7 @@
 package in.exploreit.slc.fragments.Lists;
 
+import static in.exploreit.slc.utils.Utils.TAG;
+
 import android.util.Log;
 
 import androidx.lifecycle.ViewModel;
@@ -30,6 +32,7 @@ public class ListsViewModel extends ViewModel {
                 for (QueryDocumentSnapshot document : task.getResult()) {
                     Event event = document.toObject(Event.class);
                     list.add(event);
+                    Log.d(TAG, "getAllEvents: " + event.getTargetUrl());
                     latestEvents.add(event);
                 }
                 callback.responseReturned(list);

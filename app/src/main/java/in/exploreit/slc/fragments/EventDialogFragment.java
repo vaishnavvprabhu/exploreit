@@ -60,18 +60,18 @@ public class EventDialogFragment extends DialogFragment {
         ListsViewModel viewModel = new ViewModelProvider(requireActivity()).get(ListsViewModel.class);
         try {
             Event event = viewModel.latestEvents.get(position);
-            binding.eventName.setText(event.getName());
+            binding.eventName.setText(event.getTitle());
             binding.contentPage.setText(event.getDescription());
             Glide.with(this).load(event.getImageUrl()).centerCrop().into(binding.imgEvent);
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
             SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
-            binding.contentDate.setText(dateFormat.format(event.getDate_time()));
-//            binding.contentVenue.setText(event.getVenue());
-            binding.contentTime.setText(timeFormat.format(event.getDate_time()));
-            binding.contentPrice.setText(String.valueOf(event.getPrice()));
+            binding.contentDate.setText(dateFormat.format(event.getTimeStamp()));
+            binding.contentVenue.setText(event.getVenue());
+            binding.contentTime.setText(timeFormat.format(event.getTimeStamp()));
+            binding.contentPrice.setText("\u20B9" + event.getPrice());
             binding.attendBtn.setOnClickListener(button -> {
-                Utils.openWebpage(this.requireContext(), event.getTargetUrl());
+                Utils.openWebpage(this.requireContext(), event.getTargetUrl(), this.getView());
             });
         } catch (Exception e) {
             Log.d(Utils.TAG, "onViewCreated: " + e);

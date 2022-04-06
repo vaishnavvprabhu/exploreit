@@ -31,6 +31,7 @@ import java.util.concurrent.TimeUnit;
 import in.exploreit.slc.MainActivity;
 import in.exploreit.slc.R;
 import in.exploreit.slc.data.enums.AuthStatus;
+import in.exploreit.slc.utils.Utils;
 import in.exploreit.slc.viewmodel.SharedViewModel;
 
 public class OTPFragment extends Fragment {
@@ -164,7 +165,7 @@ public class OTPFragment extends Fragment {
     }
 
     private void showErrorMessage() {
-        // TODO show snackbar
+        Utils.snackBar(this.getView(), "Something went wrong! Try again later.");
     }
 
     void navigateToHome() {

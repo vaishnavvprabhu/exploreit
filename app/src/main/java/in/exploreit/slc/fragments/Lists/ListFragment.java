@@ -143,7 +143,7 @@ public class ListFragment extends Fragment implements ListItemClickInterface, Li
         } else if(pageUrl == null) {
             Toast.makeText(requireContext(), "Error while opening link!", Toast.LENGTH_SHORT).show();
         } else {
-            Utils.openWebpage(this.requireContext(), pageUrl);
+            Utils.openWebpage(this.requireContext(), pageUrl, this.getView());
         }
     }
 
