@@ -169,7 +169,7 @@
         android:background="@drawable/contained_button"
         android:fontFamily="@font/montserrat_semibold"
         android:lineSpacingExtra="3sp"
-        android:text="Attend this event "
+        android:text="Attend this event"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
