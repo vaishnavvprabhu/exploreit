@@ -66,9 +66,9 @@ public class EventDialogFragment extends DialogFragment {
 
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
             SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
-            binding.contentDate.setText(dateFormat.format(event.getTimeStamp()));
+            binding.contentDate.setText(dateFormat.format(event.getDate_time()));
             binding.contentVenue.setText(event.getVenue());
-            binding.contentTime.setText(timeFormat.format(event.getTimeStamp()));
+            binding.contentTime.setText(timeFormat.format(event.getDate_time()));
             binding.contentPrice.setText("\u20B9" + event.getPrice());
             binding.attendBtn.setOnClickListener(button -> {
                 Utils.openWebpage(this.requireContext(), event.getTargetUrl(), this.getView());

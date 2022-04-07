@@ -15,6 +15,8 @@ public class Event implements ListItem{
 
     public int getPrice() { return price; }
 
+    public Date getDate_time() {return date_time;}
+
     public String getVenue() { return venue; }
 
     @Override public String getTitle() { return name; }
